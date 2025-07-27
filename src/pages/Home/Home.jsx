@@ -27,7 +27,7 @@ const Home = () => {
 
         <div className="hero-buttons">
           <Link to="/about" className="btn btn-primary">Learn More</Link>
-          <Link to="/services" className="btn btn-outline">All Services</Link>
+          <Link to="/service" className="btn btn-outline">All Services</Link>
         </div>
       </div>
     </section>
