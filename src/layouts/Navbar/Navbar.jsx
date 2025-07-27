@@ -5,7 +5,7 @@ import backgroundHero from '../../assets/background-hero.jpg';
 import itConsultLogo from '../../assets/itconsult-logo-green-scaled.png';
 
 // Import React Icons
-import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaFacebookF, FaTwitter, FaInstagram, FaBars, FaTimes } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaFacebookF, FaTwitter, FaInstagram, FaBars, FaTimes, FaLinkedin } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -65,6 +65,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="top-bar-social">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
@@ -132,6 +133,7 @@ const Navbar = () => {
             <span>+254 702 207 999</span>
           </div>
           <div className="mobile-social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Linkedin"><FaLinkedin /></a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
