@@ -53,7 +53,7 @@ const Services = () => {
               designed to transform, secure, and future-proof your business.
             </p>
             <a href="#it-advisory" className="services-btn">
-              About Services
+              All Services
             </a>
           </div>
         </div>
