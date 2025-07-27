@@ -1,0 +1,176 @@
+/* src/pages/Articles/Articles.css */
+
+.articles-page-section {
+  background-color: var(--primary-dark-bg); /* Dark background for the section */
+  padding: 6rem 0;
+  color: var(--text-light);
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--accent-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* 3 columns on desktop */
+  gap: 2.5rem; /* Space between cards */
+  max-width: 1200px; /* Limit grid width */
+  margin: 0 auto; /* Center the grid */
+  padding: 0 1.5rem; /* Horizontal padding */
+}
+
+.article-card {
+  background-color: var(--secondary-dark-bg); /* Slightly lighter dark for cards */
+  border-radius: 0.75rem;
+  overflow: hidden; /* Ensures image corners are rounded */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+}
+
+.article-image-wrapper {
+  width: 100%;
+  height: 220px; /* Fixed height for images */
+  overflow: hidden;
+}
+
+.article-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the area, cropping if necessary */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover .article-image {
+  transform: scale(1.05); /* Subtle zoom on image hover */
+}
+
+.article-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow content to take remaining height */
+}
+
+.article-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+
+.article-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.article-separator {
+  margin: 0 0.5rem;
+  color: var(--accent-teal); /* Teal separator */
+}
+
+.article-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Allow description to take available height */
+}
+
+.read-more-link {
+  font-size: 0.9rem;
+  color: var(--accent-teal); /* Teal for "Read More" */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  align-self: flex-start; /* Align link to the left */
+}
+
+.read-more-link:hover {
+  color: var(--white); /* White on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .articles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax for smaller screens */
+    gap: 2rem;
+  }
+  .article-image-wrapper {
+    height: 200px;
+  }
+  .article-title {
+    font-size: 1.3rem;
+  }
+  .article-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .articles-page-section {
+    padding: 4rem 0;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .articles-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+    padding: 0 1rem;
+  }
+  .article-image-wrapper {
+    height: 180px;
+  }
+  .article-content {
+    padding: 1rem;
+  }
+  .article-title {
+    font-size: 1.2rem;
+  }
+  .article-meta,
+  .article-description,
+  .read-more-link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .article-image-wrapper {
+    height: 150px;
+  }
+  .article-content {
+    padding: 0.8rem;
+  }
+}

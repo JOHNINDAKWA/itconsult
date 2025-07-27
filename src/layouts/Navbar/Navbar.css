@@ -1,0 +1,411 @@
+/* src/layouts/Navbar/Navbar.css */
+
+/* IMPORTANT: Ensure index.css is properly imported in main.jsx */
+/* It defines the --primary-dark-bg, --secondary-dark-bg, --accent-teal, etc. */
+
+.navbar {
+  width: 100%;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Top Bar Styling */
+.top-bar {
+  position: relative;
+  width: 100%;
+  padding: 0.75rem 0; /* Vertical padding */
+  color: var(--text-light);
+  font-size: 0.85rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  min-height: 80px; /* Increased min-height to match the taller design */
+  display: flex; /* Use flex to center content vertically */
+  align-items: center;
+}
+
+.top-bar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Overlay for text readability */
+  z-index: 1;
+}
+
+.top-bar-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between; /* Distribute items across the space */
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  gap: 1rem; /* Spacing between sections */
+  width: 100%; /* Ensure it takes full width of container */
+}
+
+/* Logo in Top Bar */
+.top-bar-logo {
+  height: 40px; /* Adjust height of the logo */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the whole logo is visible */
+  margin-right: 1.5rem; /* Space between logo and contact info */
+}
+
+.top-bar-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow it to grow if there's space */
+  flex-basis: auto; /* Allow content to dictate initial size */
+  min-width: 0; /* Allow shrinking */
+}
+
+.top-bar-contact {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Spacing between contact items */
+  flex-grow: 2; /* Give more room to contact info */
+  flex-basis: auto;
+  justify-content: center; /* Center contact items on larger screens */
+  flex-wrap: wrap; /* Allow contact items to wrap if space is tight */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap; /* Prevent text from breaking within an item */
+}
+
+.contact-item svg {
+  /* Targeting React Icons directly */
+  color: var(--accent-teal);
+  font-size: 1rem; /* Adjust icon size */
+}
+
+.free-call {
+  background-color: var(--accent-teal);
+  color: var(--white);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.75rem;
+  margin-left: 0.5rem;
+  display: inline-block; /* Essential for padding to apply correctly */
+}
+
+.top-bar-social {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* Slightly less gap for social icons */
+  flex-grow: 1; /* Allow it to grow */
+  flex-basis: auto;
+  justify-content: flex-end; /* Align social icons to the right */
+}
+
+.top-bar-social a {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.top-bar-social a:hover {
+  color: var(--accent-teal);
+}
+
+/* Main Navigation Bar Styling */
+.main-nav {
+  background-color: var(--secondary-dark-bg); /* Dark background for main nav */
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out; /* Smooth transition for sticky effect */
+}
+
+.main-nav-content {
+  display: flex;
+  justify-content: space-between; /* Logo left, nav links right */
+  align-items: center;
+  width: 100%; /* Ensure it takes full width of container */
+}
+
+/* Styles for the sticky navigation bar */
+.main-nav.sticky {
+  position: fixed; /* Make it fixed when sticky */
+  top: 0; /* Stick to the top of the viewport */
+  width: 100%;
+  left: 0; /* Ensure it spans the full width */
+  z-index: 999; /* Ensure it stays above other content */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a stronger shadow for separation */
+  animation: slideDown 0.3s ease-out; /* Optional: subtle animation when it becomes sticky */
+}
+
+/* Optional: Animation for the sticky bar */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Logo in Main Nav */
+.main-nav-logo {
+  height: 40px; /* Adjust height of the logo */
+  width: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-teal);
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 101;
+  color: var(--accent-teal); /* Color the React Icon directly */
+  font-size: 1.8rem; /* Size the React Icon */
+  display: flex; /* Use flex to center the icon */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Start off-screen */
+  width: 100%;
+  max-width: 350px; /* Max width for larger tablets/smaller desktops */
+  height: 100%;
+  background-color: var(--secondary-dark-bg);
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  transition: right 0.4s ease-in-out; /* Slide animation */
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  z-index: 999;
+  overflow-y: auto; /* Enable scrolling for long content */
+}
+
+.mobile-menu.open {
+  right: 0; /* Slide in */
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Logo in Mobile Menu */
+.mobile-menu-logo {
+  height: 35px; /* Adjust height for mobile logo */
+  width: auto;
+  object-fit: contain;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: var(--accent-teal);
+}
+
+.mobile-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.mobile-nav-links li a {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: block;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-links li a:hover {
+  color: var(--accent-teal);
+}
+
+.mobile-contact-details {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.mobile-contact-details h3 {
+  color: var(--white);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-contact-details p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-contact-details .contact-item {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.mobile-contact-details .contact-item svg {
+  color: var(--accent-teal);
+}
+
+.mobile-social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.mobile-social-links a {
+  color: var(--text-light);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-social-links a:hover {
+  color: var(--accent-teal);
+}
+
+/* Media Queries for Responsiveness */
+/* Desktop: Show top bar and nav links, hide hamburger */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+  .top-bar {
+    display: flex;
+  }
+  /* When the sticky bar is active, you might need to add padding to the body
+     or the element directly below the navbar to prevent content from jumping up. */
+  body.sticky-nav-active {
+    padding-top: 70px; /* Adjust this value to the height of your sticky navbar */
+  }
+}
+
+/* Tablet: Top bar content stacks, main nav remains similar */
+@media (max-width: 992px) {
+  .top-bar-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .top-bar-info,
+  .top-bar-contact,
+  .top-bar-social {
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .top-bar-contact {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Mobile: Hide top bar and desktop nav, show hamburger */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+
+  .top-bar {
+    display: none; /* Hide top bar on mobile, its content is in mobile menu */
+  }
+
+  /* Sticky nav on mobile should still work, but you might adjust its appearance */
+  .main-nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+    /* Consider a slightly different shadow or style for mobile sticky */
+  }
+}
+
+/* Smaller Mobile: Mobile menu takes full width */
+@media (max-width: 480px) {
+  .mobile-menu {
+    width: 100%;
+    max-width: none;
+    padding: 1.5rem 1rem;
+  }
+
+  .mobile-menu-header .logo-text {
+    font-size: 1.3rem;
+  }
+
+  .close-btn {
+    font-size: 1.5rem;
+  }
+
+  .mobile-nav-links li a {
+    font-size: 1.1rem;
+  }
+
+  .mobile-contact-details h3 {
+    font-size: 1.2rem;
+  }
+}

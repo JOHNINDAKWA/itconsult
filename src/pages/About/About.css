@@ -1,0 +1,152 @@
+/* src/pages/About/About.css */
+
+.about-hero-section {
+  background-color: var(--primary-dark-bg); /* Main section background */
+  padding: 4rem 0; /* No padding here, content will handle it */
+  color: var(--text-light);
+  min-height: calc(100vh - var(--navbar-total-height)); /* Fill remaining viewport height */
+  display: flex;
+  align-items: center; /* Vertically center the grid within the section */
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 0; /* No gap between image and content */
+  max-width: 1400px; /* Max width for the entire grid, similar to CTA section */
+  margin: 0 auto; /* Center the grid on the page */
+ min-height: 600px; /* Reduce height */
+  align-items: stretch; /* Make grid items stretch to fill height */
+  background-color: var(--primary-dark-bg); /* Ensure background behind content */
+  border-radius: 0.75rem; /* Rounded corners for the whole section if desired */
+  overflow: hidden; /* Hide overflow from rounded corners */
+}
+
+.about-hero-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Fill the grid cell height */
+  overflow: hidden;
+  display: flex; /* For centering image if needed */
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the container */
+  display: block;
+  filter: brightness(0.7);
+}
+
+.about-hero-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Subtle gradient from transparent to dark, matching screenshot */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%);
+  z-index: 1;
+}
+
+.about-hero-content {
+  background-color: var(--primary-dark-bg); /* Background for the content side */
+  padding: 4rem 3rem; /* Generous padding inside the content box */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: flex-start; /* Align text to the left */
+  text-align: left; /* Ensure text alignment */
+  color: var(--text-light);
+}
+
+.about-hero-subtitle {
+  font-size: 1rem;
+  color: var(--accent-teal); /* Teal for subtitle */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.about-hero-title {
+  font-family: var(--font-family-serif); /* Use Playfair Display if available */
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--white);
+  /* margin-left: -3rem;  */
+  z-index: 2;
+}
+.about-hero-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  max-width: 600px;
+}
+.about-hero-descriptio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+  max-width: 600px;
+}
+.about-hero-content .btn-gold {
+  margin-left: 1rem;
+}
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    min-height: unset; /* Allow height to adjust to content */
+    border-radius: 0; /* Remove rounded corners when stacked */
+  }
+
+  .about-hero-image-container {
+    min-height: 300px; /* Ensure image has a decent height when stacked */
+  }
+
+  .about-hero-content {
+    padding: 3rem 1.5rem; /* Adjust padding for mobile */
+    text-align: center; /* Center text when stacked */
+    align-items: center; /* Center items when stacked */
+  }
+
+  .about-hero-title {
+    font-size: 2.2rem;
+  }
+  .about-hero-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-section {
+    padding: 4rem 0; /* Add vertical padding to the section */
+    min-height: unset; /* Allow height to adjust on very small screens */
+  }
+  .about-hero-grid {
+    max-width: 100%; /* Take full width on mobile */
+    border-radius: 0; /* Ensure no rounded corners on full-width mobile */
+  }
+  .about-hero-content {
+    padding: 2.5rem 1rem;
+  }
+  .about-hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-title {
+    font-size: 1.5rem;
+  }
+  .about-hero-description {
+    font-size: 0.9rem;
+  }
+}

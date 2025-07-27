@@ -1,0 +1,204 @@
+/* src/pages/About/HistoryTimeline.css */
+
+.history-timeline-section {
+  background-color: var(--secondary-dark-bg); /* Slightly lighter dark background for this section */
+  padding: 6rem 0;
+  color: var(--text-light);
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--accent-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 1200px; /* Adjust max-width as needed */
+  margin: 0 auto;
+  padding: 0 1.5rem; /* Horizontal padding */
+}
+
+/* Vertical line in the middle */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: var(--border-color); /* Subtle line color */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px; /* Center the line */
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative; /* For positioning marker */
+  width: 100%; /* Each item spans full width of the container */
+  display: flex;
+  align-items: center; /* Vertically align content and image */
+  margin-bottom: 4rem; /* Space between timeline items */
+  justify-content: space-between; /* Distribute content/image columns */
+}
+
+/* Columns for content and image */
+.timeline-left-col,
+.timeline-right-col {
+  width: 50%; /* Each column takes half the width of the timeline-item */
+  padding: 0 2rem; /* Padding for spacing from center line */
+  box-sizing: border-box;
+  display: flex; /* Use flex to align content/image within their column */
+  justify-content: center; /* Center content/image within their column */
+}
+
+/* Marker (dot) on the timeline */
+.timeline-marker {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--accent-teal);
+  border: 3px solid var(--primary-dark-bg);
+  border-radius: 50%;
+  z-index: 2; /* Ensure marker is above line and columns */
+  left: 50%; /* Align with central line */
+  top: 50%; /* Vertically center within the item */
+  transform: translate(-50%, -50%); /* Adjust for perfect centering */
+}
+
+/* Styling for the content cards */
+.timeline-content {
+  background-color: var(--primary-dark-bg); /* Darker background for content cards */
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 450px; /* Limit content width for readability */
+  width: 100%; /* Ensure it fills its column up to max-width */
+}
+
+.timeline-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+
+.timeline-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Styling for the image wrappers */
+.timeline-image-wrapper {
+  width: 450px; /* Fixed width for the image */
+  height: 380px; /* Fixed height for the image */
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.timeline-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the wrapper */
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .timeline-container::after {
+    left: 1.5rem; /* Move line to the left for mobile */
+    margin-left: 0;
+  }
+
+  .about-hero-title {
+          margin-left: 0;
+    }
+
+
+  .timeline-item {
+    flex-direction: column; /* Stack content and image vertically */
+    align-items: flex-start; /* Align stacked content to the left */
+    text-align: left;
+    padding: 0; /* Remove padding from item itself */
+  }
+
+  .timeline-item2{
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .timeline-left-col,
+  .timeline-right-col {
+    width: 100%; /* Full width for columns when stacked */
+    padding: 0 1.5rem; /* Consistent padding for content/image */
+    justify-content: flex-start; /* Align content/image to left when stacked */
+  }
+
+  .timeline-marker {
+    left: 1.5rem;
+    transform: translateX(-50%) translateY(-50%);
+    top: 0; /* Position at the top of the item for stacked layout */
+    margin-top: 2rem; /* Space from previous item */
+  }
+
+  .timeline-image-wrapper {
+    height: 200px;
+    margin-top: 1.5rem; /* Space between content and image */
+  }
+
+  .timeline-content {
+    padding: 1.5rem; /* Adjust padding for mobile content cards */
+  }
+
+  .timeline-title {
+    font-size: 1.5rem;
+  }
+  .timeline-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .timeline-left-col,
+  .timeline-right-col {
+    padding: 0 1rem; /* Further reduce padding */
+  }
+  .timeline-marker {
+    left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .timeline-marker {
+    left: 0.75rem;
+    width: 16px;
+    height: 16px;
+  }
+  .timeline-image-wrapper {
+    height: 280px;
+    width: 280px;
+  }
+}

@@ -1,0 +1,237 @@
+/* src/pages/Home/ContactCtaSection.css */
+
+.contact-cta-section {
+  background-color: var(--primary-dark-bg); /* Main section background */
+  padding: 3rem 0; /* Vertical padding */
+  color: var(--text-light);
+}
+
+.contact-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Larger left column, smaller right column */
+  gap: 2rem; /* Space between grid items */
+  max-width: 1200px; /* Wider than standard container, similar to screenshot */
+  margin: 0 auto; /* Center the grid */
+  padding: 0 1.5rem; /* Horizontal padding */
+  align-items: stretch; /* Make grid items stretch to fill height */
+}
+
+.cta-main-image-container {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden; /* Ensures image corners are rounded */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  max-height: 550px; /* Reduced height slightly to match screenshot */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container, cropping if necessary */
+  display: block;
+}
+
+.cta-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%); /* Subtle dark gradient from bottom */
+  z-index: 1; /* Above image */
+}
+
+.cta-cards-container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 2rem; /* Space between cards */
+}
+
+.cta-card {
+  background-color: var(--secondary-dark-bg); /* Darker background for cards */
+  border-radius: 0.75rem;
+  padding: 2rem; /* Reduced padding inside cards to match screenshot */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  height: 100%; /* Make cards stretch to fill available height */
+  min-height: 200px; /* Ensure a minimum height for cards */
+  position: relative; /* Needed for absolute positioning of inner background */
+  overflow: hidden; /* Hide overflow for internal background image */
+}
+
+/* Card 1: Confidential Briefing - with background image */
+.cta-card-briefing {
+  color: var(--white); /* Ensure text is white over the image */
+  text-align: center; /* Center text for this card */
+}
+
+.cta-card-briefing .card-background-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Below content */
+}
+
+.cta-card-briefing .card-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9); /* Slightly darken the image */
+}
+
+.cta-card-briefing .card-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradient matching the screenshot's subtle dark fade */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
+  z-index: 2; /* Above image, below content */
+}
+
+.cta-card-briefing .card-content {
+  position: relative;
+  z-index: 3; /* Content on top */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items for this card */
+  justify-content: center;
+  height: 100%; /* Ensure content takes full height to center */
+}
+
+.cta-card-briefing .content-left {
+  margin-left: 40%;
+  text-align: left !important;
+}
+
+
+/* Custom button style for the gold-ish button in the screenshot */
+.btn-custom-gold {
+  background-color: #af853c;
+  color: var(--white);
+  border: 2px solid #B89C6B;
+}
+
+.btn-custom-gold:hover {
+
+   background-color: #B89C6B; 
+   color: var(--white);
+}
+
+
+/* Card 2: Sensitive Matter - with larger, rounded square image */
+.cta-card-sensitive {
+  flex-direction: row; /* Layout content and image side-by-side */
+  align-items: center;
+  gap: 1.5rem; /* Space between content and image */
+  text-align: left; /* Align text to left */
+  padding: 2rem; /* Consistent padding */
+}
+
+.cta-card-sensitive .card-content {
+  flex: 1; /* Allow text content to grow */
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.card-image-wrapper {
+  flex-shrink: 0;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%; /* Makes the container perfectly round */
+  overflow: hidden;
+  border: none; /* Removes the border */
+  box-shadow: none; /* Removes the teal glow */
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .contact-cta-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    gap: 3rem; /* More space between stacked sections */
+  }
+
+  .cta-main-image-container {
+    min-height: 300px; /* Adjust height for stacked image */
+  }
+
+  .cta-cards-container {
+    gap: 1.5rem; /* Adjust gap between cards */
+  }
+
+
+
+.cta-card-briefing .content-left {
+  margin-left: 0;
+}
+
+
+  .cta-card {
+    padding: 2rem;
+    min-height: unset; /* Remove min-height on mobile if content dictates */
+  }
+
+  .cta-card-sensitive {
+    flex-direction: column; /* Stack content and image vertically */
+    text-align: center;
+  }
+
+  .card-image-wrapper {
+    display: none;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .contact-cta-section {
+    padding: 4rem 0;
+  }
+  .contact-cta-grid {
+    padding: 0 1rem;
+  }
+  .card-title {
+    font-size: 1.4rem;
+  }
+  .card-description {
+    font-size: 0.9rem;
+
+}
+
+@media (max-width: 480px) {
+  .cta-card {
+    padding: 1.5rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+}
+}
