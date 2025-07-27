@@ -3,6 +3,7 @@ import './Home.css'; // Import Home page specific styles
 import backgroundHero from '../../assets/landing1.jpg'; // Re-use the same background image
 import AboutSection from './AboutSection';
 import ContactCtaSection from './ContactCtaSection/ContactCtaSection';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -25,8 +26,8 @@ const Home = () => {
         </p>
 
         <div className="hero-buttons">
-          <a href="#services" className="btn btn-primary">Learn More</a>
-          <a href="#services" className="btn btn-outline">All Services</a>
+          <Link to="/about" className="btn btn-primary">Learn More</Link>
+          <Link to="/services" className="btn btn-outline">All Services</Link>
         </div>
       </div>
     </section>
