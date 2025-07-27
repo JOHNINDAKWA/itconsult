@@ -3,7 +3,7 @@ import Marquee from 'react-fast-marquee';
 import './AboutSection.css';
 
 // Import images
-import itconsultImage from '../../assets/itconsult.jpg'; // For synergist-image
+import itconsultImage from '../../assets/Itconsult.jpg'; // For synergist-image
 import missionBg from '../../assets/mission-bg.jpg'; // For Mission card background
 import visionBg from '../../assets/strategy-bg.jpg'; // For Vision card background
 import strategyBg from '../../assets/vision-bg.jpg'; // For Strategy card background
