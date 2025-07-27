@@ -40,10 +40,10 @@ const Footer = () => {
         <div className="footer-col footer-links">
           <h4 className="footer-col-title">Services</h4>
           <ul>
-            <li><Link to="/services">IT Advisory & Consulting</Link></li>
-            <li><Link to="/services">Governance, Risk & Compliance</Link></li>
-            <li><Link to="/services">Managed IT Services</Link></li>
-            <li><Link to="/services">Technology Sourcing</Link></li>
+            <li><Link to="/services#it-advisory">IT Advisory & Consulting</Link></li>
+            <li><Link to="/services#grc">Governance, Risk & Compliance</Link></li>
+            <li><Link to="/services#managed-it">Managed IT Services</Link></li>
+            <li><Link to="/services#tech-sourcing">Technology Sourcing</Link></li>
           </ul>
         </div>
 

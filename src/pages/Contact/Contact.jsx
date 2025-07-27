@@ -46,7 +46,7 @@ const Contact = () => {
               </div>
               <div className="contact-info-item">
                 <FaEnvelope />
-                <span>info@itconsult.com</span>
+                <span>info@itconsult.africa</span>
               </div>
               <div className="contact-social-links">
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
@@ -74,12 +74,12 @@ const Contact = () => {
             <div className="contact-block">
               <FaWhatsapp className="contact-block-icon" />
               <p className="contact-block-label">Whatsapp</p>
-              <p className="contact-block-value">+254 702 207 998</p> {/* Placeholder Fax */}
+              <p className="contact-block-value">+254 702 207 999</p> {/* Placeholder Fax */}
             </div>
             <div className="contact-block">
               <FaEnvelope className="contact-block-icon" />
               <p className="contact-block-label">Have any questions?</p>
-              <p className="contact-block-value">info@itconsult.com</p>
+              <p className="contact-block-value">info@itconsult.africa</p>
             </div>
             <div className="contact-block">
               <FaMapMarkerAlt className="contact-block-icon" />

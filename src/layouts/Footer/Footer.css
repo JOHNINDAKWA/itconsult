@@ -9,7 +9,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden; /* Hide any overflow from background image */
+  overflow: hidden; 
 }
 
 .footer-overlay {
@@ -29,7 +29,8 @@
   display: grid;
   grid-template-columns: 2fr repeat(3, 1fr); /* Adjust column widths: wider first col, then 4 equal */
   gap: 4rem; /* Space between columns */
-  padding-bottom: 3rem; /* Padding before copyright section */
+  padding-bottom: 2rem !important; /* Padding before copyright section */
+  margin-bottom: 2rem !important;
 }
 
 .footer-col {

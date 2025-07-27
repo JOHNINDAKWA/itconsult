@@ -56,7 +56,7 @@ const Navbar = () => {
             </div>
             <div className="contact-item">
               <FaEnvelope />
-              <span>info@itconsult.com</span>
+              <span>info@itconsult.africa</span>
             </div>
             <div className="contact-item">
               <FaPhoneAlt />
@@ -125,7 +125,7 @@ const Navbar = () => {
           </div>
           <div className="contact-item">
             <FaEnvelope />
-            <span>info@itconsult.com</span>
+            <span>info@itconsult.africa</span>
           </div>
           <div className="contact-item">
             <FaPhoneAlt />
