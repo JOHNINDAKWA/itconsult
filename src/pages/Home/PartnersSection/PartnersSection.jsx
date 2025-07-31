@@ -1,23 +1,23 @@
 import React from 'react';
 import './PartnersSection.css';
-import partner1 from '../../../assets/partners/partner1.png';
-import partner2 from '../../../assets/partners/partner2.png';
-import partner3 from '../../../assets/partners/partner3.png';
-import partner4 from '../../../assets/partners/partner4.png';
-import partner5 from '../../../assets/partners/partner5.png';
-import partner6 from '../../../assets/partners/partner6.png';
-import partner7 from '../../../assets/partners/partner7.png';
-import partner8 from '../../../assets/partners/partner8.png';
-import partner9 from '../../../assets/partners/partner9.png'; // Bitdefender
-import partner10 from '../../../assets/partners/partner10.png'; // Sophos
-import partner11 from '../../../assets/partners/partner11.png'; // Kristel Communication
-import partner12 from '../../../assets/partners/partner12.png'; // Dell Technologies
-import partner13 from '../../../assets/partners/partner13.png'; // DOSIKI LTD
-import partner14 from '../../../assets/partners/partner14.png'; // Lenovo 360 Infrastructure
-import partner15 from '../../../assets/partners/partner15.png'; // Lenovo 360 Intelligent
-import partner16 from '../../../assets/partners/partner16.png'; // Microsoft Solutions Partner (Modern Work)
-import partner17 from '../../../assets/partners/partner17.png'; // Microsoft Partner
-import partner18 from '../../../assets/partners/partner18.png'; // Placeholder for additional partners
+import partner1 from '../../../assets/partners/Partner1.png';
+import partner2 from '../../../assets/partners/Partner2.png';
+import partner3 from '../../../assets/partners/Partner3.png';
+import partner4 from '../../../assets/partners/Partner4.png';
+import partner5 from '../../../assets/partners/Partner5.png';
+import partner6 from '../../../assets/partners/Partner6.png';
+import partner7 from '../../../assets/partners/Partner7.png';
+import partner8 from '../../../assets/partners/Partner8.png';
+import partner9 from '../../../assets/partners/Partner9.png'; // Bitdefender
+import partner10 from '../../../assets/partners/Partner10.png'; // Sophos
+import partner11 from '../../../assets/partners/Partner11.png'; // Kristel Communication
+import partner12 from '../../../assets/partners/Partner12.png'; // Dell Technologies
+import partner13 from '../../../assets/partners/Partner13.png'; // DOSIKI LTD
+import partner14 from '../../../assets/partners/Partner14.png'; // Lenovo 360 Infrastructure
+import partner15 from '../../../assets/partners/Partner15.png'; // Lenovo 360 Intelligent
+import partner16 from '../../../assets/partners/Partner16.png'; // Microsoft Solutions Partner (Modern Work)
+import partner17 from '../../../assets/partners/Partner17.png'; // Microsoft Partner
+import partner18 from '../../../assets/partners/Partner18.png'; // Placeholder for additional partners
 
 const partnerLogos = [
     { src: partner1, alt: 'Mada Hotels', description: 'A premier hotel chain and client.' },
