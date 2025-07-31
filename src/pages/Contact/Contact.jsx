@@ -38,18 +38,18 @@ const Contact = () => {
               <h3 className="card-title">Contact Details</h3>
               <div className="contact-info-item">
                 <FaMapMarkerAlt />
-                <span>5010 Avenue of the Moon, Nairobi, Kenya</span>
+                <span> Indigo Cowork Space, General Mathenge</span>
               </div>
               <div className="contact-info-item">
                 <FaPhoneAlt />
-                <span>+254 702 207 999</span>
+                <span>+254 737 532 023</span>
               </div>
               <div className="contact-info-item">
                 <FaEnvelope />
                 <span>info@itconsult.africa</span>
               </div>
               <div className="contact-social-links">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
+                <a href="https://www.linkedin.com/company/itconsultafrica" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedinIn /></a>
                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
@@ -69,12 +69,12 @@ const Contact = () => {
             <div className="contact-block">
               <FaPhoneAlt className="contact-block-icon" />
               <p className="contact-block-label">Call us</p>
-              <p className="contact-block-value">+254 702 207 999</p>
+              <p className="contact-block-value">+254 737 532 023</p>
             </div>
             <div className="contact-block">
               <FaWhatsapp className="contact-block-icon" />
               <p className="contact-block-label">Whatsapp</p>
-              <p className="contact-block-value">+254 702 207 999</p> {/* Placeholder Fax */}
+              <p className="contact-block-value">+254 737 532 023</p> {/* Placeholder Fax */}
             </div>
             <div className="contact-block">
               <FaEnvelope className="contact-block-icon" />
@@ -84,7 +84,7 @@ const Contact = () => {
             <div className="contact-block">
               <FaMapMarkerAlt className="contact-block-icon" />
               <p className="contact-block-label">Our Location</p>
-              <p className="contact-block-value">5010 Avenue of the Moon, Nairobi, Kenya</p>
+              <p className="contact-block-value"> Indigo Cowork Space, General Mathenge</p>
             </div>
           </div>
         </div>

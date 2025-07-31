@@ -183,7 +183,7 @@ const Navbar = () => {
           <p>Give us a call or drop by anytime, we endeavor to answer all inquiries within 24 hours.</p>
           <div className="contact-item">
             <FaMapMarkerAlt />
-            <span>5010 Avenue of the Moon, Nairobi, Kenya</span>
+            <span> Indigo Cowork Space, General Mathenge</span>
           </div>
           <div className="contact-item">
             <FaEnvelope />
@@ -191,10 +191,10 @@ const Navbar = () => {
           </div>
           <div className="contact-item">
             <FaPhoneAlt />
-            <span>+254 702 207 999</span>
+            <span>+254 737 532 023</span>
           </div>
           <div className="mobile-social-links">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Linkedin"><FaLinkedin /></a>
+            <a href="https://www.linkedin.com/company/itconsultafrica" target="_blank" rel="noopener noreferrer" aria-label="Linkedin"><FaLinkedin /></a>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>

@@ -207,7 +207,7 @@ const Footer = () => {
             <h4 className="footer-col-title">Follow Us</h4>
             <div className="footer-social-links">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/itconsultafrica"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
