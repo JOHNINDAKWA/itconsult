@@ -3,7 +3,7 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: calc(100vh - 152px); /* Full viewport height */
+  height: calc(100vh - 72px); /* Full viewport height */
   display: flex;
   align-items: center; /* Vertically center content */
   justify-content: center; /* Horizontally center content */
