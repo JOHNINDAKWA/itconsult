@@ -4,6 +4,7 @@ import backgroundHero from '../../assets/landing1.jpg'; // Re-use the same backg
 import AboutSection from './AboutSection';
 import ContactCtaSection from './ContactCtaSection/ContactCtaSection';
 import { Link } from 'react-router-dom';
+import PartnersSection from './PartnersSection/PartnersSection';
 
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
       </div>
     </section>
       <AboutSection />
+       <PartnersSection /> 
       <ContactCtaSection />
 
     </>

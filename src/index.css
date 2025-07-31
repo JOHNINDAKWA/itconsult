@@ -8,14 +8,14 @@
 
 :root {
   /* Color Variables - Darkish Background & Teal Theme */
-  --primary-dark-bg: #1A202C; /* A deep charcoal/dark blue for main backgrounds */
-  --secondary-dark-bg: #2D3748; /* Slightly lighter dark for cards/sections */
-  --accent-teal: #00BFA5; /* Bright teal for accents, buttons, links */
-  --accent-teal-dark: #00897B; /* Darker teal for hover states */
-  --text-light: #E2E8F0; /* Light gray for general text */
-  --text-muted: #A0AEC0; /* Muted gray for secondary text */
-  --border-color: #4A5568; /* Subtle border color */
-  --white: #FFFFFF; /* Pure white for high contrast elements */
+  --primary-dark-bg: #1A202C;
+  --secondary-dark-bg: #2D3748; 
+  --accent-teal: #00BFA5; 
+  --accent-teal-dark: #00897B; 
+  --text-light: #E2E8F0; 
+  --text-muted: #A0AEC0; 
+  --border-color: #4A5568; 
+  --white: #FFFFFF;
 
   /* Font Variables */
   --font-family-primary: 'Inter', sans-serif;

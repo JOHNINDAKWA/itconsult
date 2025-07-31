@@ -1,0 +1,379 @@
+/* src/pages/ManagedIT.css */
+
+/* General Styles */
+.managed-it-page {
+  background-color: var(--primary-bg);
+  color: var(--text-light);
+}
+
+/* Hero Section */
+.managed-it-hero {
+  padding: 50px 0;
+  background-color: #161317; /* Use a solid dark color */
+}
+
+.managed-it-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.managed-it-image {
+  flex: 1 1 50%;
+}
+
+.managed-it-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.managed-it-content {
+  flex: 1 1 50%;
+}
+
+.managed-it-title {
+  font-size: 2.5rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-family-serif);
+}
+
+.managed-it-subtitle {
+  color: var(--accent-teal);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.managed-it-description {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Service Highlights */
+.managed-it-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.highlight-card {
+  background-color: var(--secondary-dark-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-icon {
+  font-size: 1.4rem;
+  color: var(--accent-teal);
+  background-color: rgba(255, 255, 255, 0.05);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.highlight-card h3 {
+  color: var(--white);
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.highlight-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Device Buyback Section */
+.buyback-section {
+  padding: 80px 0;
+  background-color: var(--secondary-dark-bg);
+}
+
+.buyback-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4rem;
+}
+
+.buyback-content {
+  flex: 1 1 50%;
+}
+
+.buyback-image {
+  flex: 1 1 40%;
+}
+
+.buyback-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.buyback-title {
+  color: var(--white);
+  font-size: 2rem;
+  font-family: var(--font-family-serif);
+  margin-bottom: 1rem;
+}
+
+.buyback-description {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.buyback-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.buyback-content li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.buyback-content li svg {
+  color: var(--accent-teal);
+}
+
+.buyback-callout {
+  color: var(--accent-teal);
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+/* What You Gain Section (New Design) */
+.gains-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.gains-title {
+  color: var(--accent-teal);
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gains-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.gains-card {
+  background-color: var(--secondary-dark-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.gains-card:hover {
+  transform: translateY(-5px);
+}
+
+.gains-icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--accent-teal);
+  font-size: 2rem;
+}
+
+.gains-card h3 {
+  color: var(--white);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gains-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* src/pages/ManagedIT.css */
+/* ... (Keep all existing CSS styles above this point) ... */
+
+/* CTA Section (New Design) */
+.managed-it-cta-section {
+    /* Use a linear gradient for a modern, beautiful look */
+    background: linear-gradient(135deg, var(--secondary-dark-bg), #0f0c0f);
+    padding: 5rem 0; /* Increase padding for more breathing room */
+    text-align: center;
+    border-radius: 16px; /* Add rounded corners to the section */
+    margin: 4rem auto; /* Center the section and add margin */
+    max-width: 1200px; /* Limit width to make it a contained card-like section */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Add a deep shadow for depth */
+    position: relative; /* For the background elements */
+    overflow: hidden; /* To contain pseudo-elements */
+}
+
+/* Subtle background pattern/element for visual interest */
+/* .managed-it-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 15px 15px;
+    opacity: 0.2;
+    z-index: 0;
+} */
+
+.managed-it-cta-section .cta-content {
+    margin-bottom: 2.5rem; /* Slightly more space */
+    position: relative; /* Bring content to the front */
+    z-index: 5;
+}
+
+.managed-it-cta-section .cta-title {
+    font-size: 2rem; /* Make the title larger and more impactful */
+    color: var(--white); /* Use pure white for a strong contrast */
+    font-weight: 800; /* Bolder font weight */
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.managed-it-cta-section .cta-subtitle {
+    color: var(--text-muted); /* A slightly lighter, more readable gray */
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.managed-it-cta-section .cta-btn {
+    background: var(--accent-teal); /* The button has a solid accent color */
+    color: var(--primary-bg);
+    border: none;
+    padding: 1.2rem 3.5rem; /* Larger padding for a more substantial button */
+    font-size: 1.2rem;
+    font-weight: 700; /* Bolder button text */
+    border-radius: 999px; /* Pill-shaped button */
+    box-shadow: 0 8px 15px rgba(0, 191, 165, 0.25); /* Accent-colored glow */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother hover transition */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.managed-it-cta-section .cta-btn:hover {
+    background-color: var(--white); /* Hover to white */
+    color: var(--accent-teal); /* Text changes to accent color */
+    transform: translateY(-5px) scale(1.05); /* Lifts and slightly enlarges */
+    box-shadow: 0 10px 20px rgba(0, 191, 165, 0.4); /* Stronger hover glow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .managed-it-cta-section {
+        padding: 3rem 1.5rem; /* Adjust padding for mobile */
+        margin: 3rem 1rem;
+    }
+    .managed-it-cta-section .cta-title {
+        font-size: 2rem; /* Reduce font size on mobile */
+    }
+    .managed-it-cta-section .cta-subtitle {
+        font-size: 1rem;
+    }
+    .managed-it-cta-section .cta-btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .managed-it-grid, .buyback-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .managed-it-image, .managed-it-content, .buyback-image, .buyback-content {
+    flex: 1 1 100%;
+  }
+  .managed-it-highlights {
+      grid-template-columns: 1fr;
+  }
+  .buyback-content {
+      order: 2; /* Put the content below the image on mobile */
+  }
+  .buyback-image {
+      order: 1; /* Put the image above the content on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .managed-it-hero {
+    padding: 60px 0;
+  }
+  .managed-it-title {
+    font-size: 2rem;
+  }
+  .managed-it-subtitle {
+    font-size: 1rem;
+  }
+  .managed-it-highlights {
+    gap: 1rem;
+  }
+  .buyback-section {
+    padding: 60px 0;
+  }
+  .gains-title {
+      font-size: 1.3rem;
+  }
+  .gains-card {
+      padding: 2rem 1.5rem;
+  }
+  .gains-icon-circle {
+      width: 60px;
+      height: 60px;
+      font-size: 1.8rem;
+  }
+  .managed-it-cta-section {
+    padding: 3rem 0;
+  }
+  .managed-it-cta-section .cta-title {
+      font-size: 1.8rem;
+  }
+  .managed-it-cta-section .cta-subtitle {
+      font-size: 1rem;
+  }
+  .managed-it-cta-section .cta-btn {
+      font-size: 1.1rem;
+      padding: 0.8rem 2rem;
+  }
+}

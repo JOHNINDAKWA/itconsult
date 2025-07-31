@@ -9,69 +9,6 @@
   z-index: 1000;
 }
 
-/* Top Bar Styling */
-.top-bar {
-  position: relative;
-  width: 100%;
-  padding: 0.75rem 0; /* Vertical padding */
-  color: var(--text-light);
-  font-size: 0.85rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  min-height: 80px; /* Increased min-height to match the taller design */
-  display: flex; /* Use flex to center content vertically */
-  align-items: center;
-}
-
-.top-bar-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Overlay for text readability */
-  z-index: 1;
-}
-
-.top-bar-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: space-between; /* Distribute items across the space */
-  align-items: center;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-  gap: 1rem; /* Spacing between sections */
-  width: 100%; /* Ensure it takes full width of container */
-}
-
-/* Logo in Top Bar */
-.top-bar-logo {
-  height: 40px; /* Adjust height of the logo */
-  width: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the whole logo is visible */
-  margin-right: 1.5rem; /* Space between logo and contact info */
-}
-
-.top-bar-info {
-  display: flex;
-  align-items: center;
-  flex-grow: 1; /* Allow it to grow if there's space */
-  flex-basis: auto; /* Allow content to dictate initial size */
-  min-width: 0; /* Allow shrinking */
-}
-
-.top-bar-contact {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem; /* Spacing between contact items */
-  flex-grow: 2; /* Give more room to contact info */
-  flex-basis: auto;
-  justify-content: center; /* Center contact items on larger screens */
-  flex-wrap: wrap; /* Allow contact items to wrap if space is tight */
-}
-
 .contact-item {
   display: flex;
   align-items: center;
@@ -79,40 +16,6 @@
   white-space: nowrap; /* Prevent text from breaking within an item */
 }
 
-.contact-item svg {
-  /* Targeting React Icons directly */
-  color: var(--accent-teal);
-  font-size: 1rem; /* Adjust icon size */
-}
-
-.free-call {
-  background-color: var(--accent-teal);
-  color: var(--white);
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.3rem;
-  font-size: 0.75rem;
-  margin-left: 0.5rem;
-  display: inline-block; /* Essential for padding to apply correctly */
-}
-
-.top-bar-social {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem; /* Slightly less gap for social icons */
-  flex-grow: 1; /* Allow it to grow */
-  flex-basis: auto;
-  justify-content: flex-end; /* Align social icons to the right */
-}
-
-.top-bar-social a {
-  color: var(--text-light);
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.top-bar-social a:hover {
-  color: var(--accent-teal);
-}
 
 /* Main Navigation Bar Styling */
 .main-nav {
@@ -170,27 +73,157 @@
   color: var(--white);
   font-weight: 400;
   font-size: 1rem;
-  padding: 0.5rem 0;
   position: relative;
   transition: color 0.3s ease;
-  text-transform: uppercase;
 }
 
-.nav-links li a::after {
+.nav-links .listed a::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -5px;
   width: 0;
   height: 2px;
   background-color: var(--accent-teal);
   transition: width 0.3s ease;
 }
 
-.nav-links li a:hover::after,
-.nav-links li a.active::after {
+.nav-links .listed a:hover::after,
+.nav-links .listed a.active::after {
   width: 100%;
 }
+
+
+
+/* Desktop Services Dropdown */
+.services-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.services-dropdown-toggle {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.services-dropdown-toggle:hover {
+  color: var(--accent-teal);
+}
+
+.services-dropdown-menu {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  background-color: var(--primary-dark-bg);
+  min-width: 360px; /* Adjusted width to fit the new design */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  padding: 0.5rem; /* Padding inside the dropdown container */
+  margin-top: 10px;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  display: flex; /* Use flexbox for a column layout */
+  flex-direction: column;
+}
+
+.services-dropdown-container:hover .services-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.services-dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem !important;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s ease;
+  color: var(--text-light); /* Set base text color */
+}
+
+.services-dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.05); /* Subtle hover background */
+}
+
+.dropdown-icon {
+  font-size: 2rem;
+  color: var(--accent-teal);
+  min-width: 2rem; /* Keep icons aligned */
+}
+
+.dropdown-text {
+  flex-grow: 1;
+}
+
+.dropdown-title {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.dropdown-description {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.4;
+  
+}
+
+/* --- Mobile Dropdown Styles --- */
+
+.mobile-dropdown-container {
+  width: 100%;
+}
+
+.mobile-dropdown-toggle {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+  color: var(--accent-teal);
+}
+
+.mobile-services-dropdown-menu {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-left: 2px solid var(--border-color);
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.mobile-services-dropdown-menu li a {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding: 0.5rem 0;
+}
+
+.mobile-services-dropdown-menu li a:hover {
+  color: var(--accent-teal);
+}
+
+/* ... (Keep all existing CSS styles below this point) ... */
+
 
 /* Hamburger Menu Icon */
 .hamburger {
