@@ -20,7 +20,7 @@ import ScrollToTop from './components/ScrollToTop'; // Adjust path if needed
 import ManagedITjsx from './pages/Services/ManagedIT/ManagedIT.jsx';
 import ITAdvisory from './pages/Services/ITAdvisory/ITAdvisory';
 import TechSourcing from './pages/Services/TechSourcing/TechSourcing';
-import Grc from './pages/Services/grc/grc.jsx';
+import Grace from './pages/Services/Grc/Grace.jsx';
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services/grc" element={<Grc />} />
+          <Route path="/services/grc" element={<Grace />} />
           <Route path="/services/managed-it" element={<ManagedITjsx />} />
           <Route path="/services/it-advisory" element={<ITAdvisory />} />
           <Route path="/services/tech-sourcing" element={<TechSourcing />} />

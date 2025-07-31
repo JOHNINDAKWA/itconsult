@@ -15,9 +15,9 @@ import {
 } from 'react-icons/fa';
 import GRCImage from '../../../assets/grc-hero.jpg';
 import GainsImage from '../../../assets/gains3.jpg'; 
-import './GRC.css';
+import './Grace.css';
 
-const GRC = () => {
+const Grace = () => {
   return (
     <section id="grc" className="services-detail-section grc-bg">
       <div className="overlay">
@@ -123,4 +123,4 @@ const GRC = () => {
   );
 };
 
-export default GRC;
+export default Grace;
