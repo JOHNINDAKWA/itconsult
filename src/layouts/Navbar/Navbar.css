@@ -331,9 +331,13 @@
   color: var(--text-light);
 }
 
-.mobile-contact-details .contact-item svg {
+.mobile-contact-details .contact-item a {
+  color: var(--white);
+} 
+
+.mobile-contact-details .contact-item a:hover {
   color: var(--accent-teal);
-}
+} 
 
 .mobile-social-links {
   display: flex;

@@ -193,12 +193,11 @@ const Navbar = () => {
             <FaPhoneAlt />
             <span>+254 737 532 023</span>
           </div>
-          <div className="mobile-social-links">
-            <a href="https://www.linkedin.com/company/itconsultafrica" target="_blank" rel="noopener noreferrer" aria-label="Linkedin"><FaLinkedin /></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+          <div className="contact-item">
+            <FaLinkedin />
+            <span><a href="https://www.linkedin.com/company/itconsultafrica" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">Linkedin</a></span>
           </div>
+ 
         </div>
       </div>
     </nav>

@@ -8,9 +8,7 @@ import LegalModal from "../../components/LegalModal/LegalModal";
 
 const DisclaimerText = [
   "Introduction...",
-  "1.1 General Disclaimer...",
-  "1.2 No Client Relationship...",
-  // ... add all paragraphs of your Disclaimer here
+
   "This Disclaimer applies to the website accessible at https://itconsult.africa. It should be read together with our Terms of Use and Privacy Policy for a complete understanding of your rights and obligations when using this site. The full legal identity of the company operating this website is outlined in the Privacy Policy.",
   "1.1 General Disclaimer",
   "The content available on this website is for general informational purposes only. We make reasonable efforts to ensure the accuracy and relevance of the information presented, but do not guarantee its completeness, reliability, or currency. No content on this site should be construed as legal, financial, or professional advice. For specific concerns, users are encouraged to consult directly with our team or other qualified professionals.",
@@ -30,8 +28,6 @@ const DisclaimerText = [
 
 const TermsOfUseText = [
   "Introduction...",
-  "2.1 Acceptance of Terms...",
-  "2.2 Permitted Use...",
   "These Terms of Use govern your interaction with the website accessible at https://itconsult.africa. Please read these Terms in conjunction with our Disclaimer and Privacy Policy. The Privacy Policy contains the full legal identity of the organization responsible for this website.",
   "2.1 Acceptance of Terms",
   "By accessing or using this website, you accept and agree to be legally bound by these Terms. If you do not agree, please refrain from using the site.",
@@ -57,8 +53,6 @@ const TermsOfUseText = [
 
 const PrivacyPolicyText = [
   "Introduction...",
-  "3.1 Personal Data We Collect...",
-  "3.2 How We Use Your Data...",
   "This Privacy Policy explains how ITCONSULT LIMITED, trading as IT CONSULT, collects, uses, discloses, and protects your personal data. We operate under the provisions of the Kenyan Data Protection Act, 2019, and adhere to global best practices including GDPR principles for transparency, accountability, and data minimization. This document also defines the legal entity behind the website and should be read together with the Disclaimer and Terms of Use.",
   "3.1 Personal Data We Collect",
   "We collect and process the following types of personal data:",
@@ -212,23 +206,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <FaLinkedinIn />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <FaInstagram />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-              >
-                <FaTwitter />
+                LinkedIn
               </a>
             </div>
             <p className="footer-newsletter-text">
