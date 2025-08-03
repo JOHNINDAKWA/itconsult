@@ -4,7 +4,7 @@
 
 .partners-section {
   padding: 100px 0;
-  background: linear-gradient(180deg, #0e1a25 0%, #111c2b 100%);
+  background: #1a202c;
   color: var(--text-light, #ffffff);
   text-align: center;
   position: relative;
