@@ -4,6 +4,7 @@ import "./Footer.css";
 import footerBg from "../../assets/footer-bg.jpeg";
 import itConsultLogo from "../../assets/itconsult-logo-green-scaled.png";
 import { FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import LegalModal from "../../components/LegalModal/LegalModal";
 
 const DisclaimerText = [
@@ -153,7 +154,7 @@ const Footer = () => {
               <li>
                 <Link to="/contact">Contact</Link>
               </li>
-            <li>
+              <li>
                 <Link to="/articles">Articles</Link>
               </li>
             </ul>
@@ -185,10 +186,14 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
+                className="linkedin-brand"
               >
-                <FaLinkedinIn className="footer-social-icon" />
+                <span className="linkedin-text">Linked</span>
+                <FaLinkedinIn className="linkedin-icon" />
+                <FaArrowUpRightFromSquare className="external-link-icon" />
               </a>
             </div>
+
             <p className="footer-newsletter-text">
               Stay updated with our latest insights.
             </p>
@@ -201,12 +206,21 @@ const Footer = () => {
           </div>
         </div>
 
-
         <div className="footer-legal-links">
-  <button onClick={() => openModal("Website Disclaimer", DisclaimerText)}>Disclaimer</button>
-  <button onClick={() => openModal("Terms Of Use", TermsOfUseText)}>Terms of Use</button>
-  <button onClick={() => openModal("Privacy Policy", PrivacyPolicyText)}>Privacy Policy</button>
-</div>
+          <button
+            onClick={() => openModal("Website Disclaimer", DisclaimerText)}
+          >
+            Disclaimer
+          </button>
+          <button onClick={() => openModal("Terms Of Use", TermsOfUseText)}>
+            Terms of Use
+          </button>
+          <button
+            onClick={() => openModal("Privacy Policy", PrivacyPolicyText)}
+          >
+            Privacy Policy
+          </button>
+        </div>
 
         <div className="footer-copyright">
           <div className="container">

@@ -105,6 +105,60 @@
   align-self: flex-start; /* Align button to the left */
 }
 
+.linkedin-brand {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  gap: 0.25rem;
+  color: #0077b5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.linkedin-brand:hover {
+  color: #005582;
+}
+
+.linkedin-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -0.5px;
+  font-size: 1.3rem;
+}
+
+.linkedin-icon {
+  background-color: #0077b5;
+  color: white;
+  border-radius: 4px;
+  padding: 2px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.linkedin-brand:hover .linkedin-icon {
+  background-color: #005582;
+  transform: scale(1.05);
+}
+
+.linkedin-brand:hover .linkedin-text {
+  text-decoration: underline;
+}
+
+.external-link-icon {
+  font-size: 0.6rem;
+  font-weight: 100;
+  margin-left: 4px;
+  margin-top: -25px;
+  color: var(--accent-teal);
+  transition: transform 0.3s ease;
+}
+
+.linkedin-brand:hover .external-link-icon {
+  transform: translateY(-1px) scale(1.1);
+  color: #005582;
+}
+
+
 /* Copyright Section */
 .footer-copyright {
   position: relative;
