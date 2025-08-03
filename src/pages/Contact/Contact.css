@@ -70,14 +70,14 @@
 
 /* Contact Details Card - Now with background image */
 .contact-details-card {
-  position: relative; /* For absolute positioning of background image */
-  background-color: var(--secondary-dark-bg); /* Fallback background */
+  position: relative; 
+  background-color: var(--secondary-dark-bg); 
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically center content */
+  justify-content: center; 
   color: var(--white);
-  overflow: hidden; /* Hide overflowing background image */
+  overflow: hidden; 
 }
 
 .contact-details-card .card-background-image-container {
@@ -134,20 +134,15 @@
   flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
-.contact-social-links {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
+.contact-info-item span a{
+  color: #f0f0f0;
+  text-decoration: none;
 }
 
-.contact-social-links a {
-  color: var(--text-light);
-  font-size: 1.5rem;
-  transition: color 0.3s ease;
-}
 
-.contact-social-links a:hover {
+.contact-info-item span a:hover {
   color: var(--accent-teal);
+  text-decoration: underline;
 }
 
 /* --- Contact Info Section (Middle Section: Blocks of Contact Info) --- */
