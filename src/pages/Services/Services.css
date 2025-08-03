@@ -69,6 +69,7 @@
 
 .services-btn:hover {
     background-color: var(--accent-teal-dark);
+    color: white;
 }
 
 /* Service Cards with new "View More" link */

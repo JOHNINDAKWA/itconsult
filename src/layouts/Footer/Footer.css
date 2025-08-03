@@ -117,13 +117,17 @@
 }
 
 .linkedin-brand:hover {
-  color: #005582;
+  color: #0077b5;
 }
 
 .linkedin-text {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: -0.5px;
   font-size: 1.3rem;
+}
+
+.linkedin-text:hover {
+   color: #0077b5;
 }
 
 .linkedin-icon {
@@ -140,9 +144,7 @@
   transform: scale(1.05);
 }
 
-.linkedin-brand:hover .linkedin-text {
-  text-decoration: underline;
-}
+
 
 .external-link-icon {
   font-size: 0.6rem;

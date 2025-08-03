@@ -28,6 +28,7 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isMobileServicesDropdownOpen, setIsMobileServicesDropdownOpen] = useState(false);
+const [dropdownHideTimeout, setDropdownHideTimeout] = useState(null);
 
   // Toggle mobile menu
   const toggleMobileMenu = () => {
@@ -35,20 +36,31 @@ const Navbar = () => {
   };
 
   // Toggle desktop services dropdown on hover or click
-  const toggleServicesDropdown = () => {
-    setIsServicesDropdownOpen(!isServicesDropdownOpen);
-  };
+  // const toggleServicesDropdown = () => {
+  //   setIsServicesDropdownOpen(!isServicesDropdownOpen);
+  // };
 
   // Toggle mobile services dropdown on click
   const toggleMobileServicesDropdown = () => {
     setIsMobileServicesDropdownOpen(!isMobileServicesDropdownOpen);
   };
 
-  // Close dropdown on mouse leave
-  const handleMouseLeave = () => {
-    setIsServicesDropdownOpen(false);
-  };
+// Show dropdown immediately
+const handleMouseEnter = () => {
+  if (dropdownHideTimeout) {
+    clearTimeout(dropdownHideTimeout); // cancel pending hide
+    setDropdownHideTimeout(null);
+  }
+  setIsServicesDropdownOpen(true);
+};
 
+// Delay hiding dropdown
+const handleMouseLeave = () => {
+  const timeout = setTimeout(() => {
+    setIsServicesDropdownOpen(false);
+  }, 200); // 200ms delay before hiding
+  setDropdownHideTimeout(timeout);
+};
   useEffect(() => {
     const handleScroll = () => {
       const mainNav = document.querySelector('.main-nav');
@@ -90,16 +102,15 @@ const Navbar = () => {
             <li className='listed'><Link to="/about">About Us</Link></li>
             {/* Services Dropdown */}
             <li
-              className="services-dropdown-container"
-              onMouseEnter={() => setIsServicesDropdownOpen(true)}
-              onMouseLeave={handleMouseLeave}
-              onClick={toggleServicesDropdown}
-            >
-              <Link to="/services" className="services-dropdown-toggle">
-                Services <FaAngleDown />
-              </Link>
-              {isServicesDropdownOpen && (
-                <div className="services-dropdown-menu">
+  className="services-dropdown-container"
+  onMouseEnter={handleMouseEnter}
+  onMouseLeave={handleMouseLeave}
+>
+  <Link to="/services" className="services-dropdown-toggle">
+    Services <FaAngleDown />
+  </Link>
+  {isServicesDropdownOpen && (
+    <div className="services-dropdown-menu">
                   {/* Service Item 1: IT Advisory */}
                   <Link to="/services/it-advisory" className="services-dropdown-item" onClick={handleMouseLeave}>
                     <FaRegLightbulb className="dropdown-icon" />
