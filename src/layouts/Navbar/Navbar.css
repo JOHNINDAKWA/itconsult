@@ -118,7 +118,7 @@
 .services-dropdown-menu {
   position: absolute;
   top: 75%;
-  left: -100px;
+  left: -200px;
   background-color: var(--primary-dark-bg);
   min-width: 360px; /* Adjusted width to fit the new design */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './PartnersSection.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Marquee from 'react-fast-marquee';
 
 // --- Partner & Client Logos ---
 import partner1 from '../../../assets/Clients/Partner1.png';
@@ -12,16 +13,16 @@ import partner5 from '../../../assets/Clients/Partner5.png';
 import partner6 from '../../../assets/Clients/Partner6.png';
 import partner7 from '../../../assets/Clients/Partner7.png';
 import partner8 from '../../../assets/Clients/Partner8.png';
-import partner9 from '../../../assets/Clients/Partner9.png'; // Bitdefender
-import partner10 from '../../../assets/Clients/Partner10.png'; // Sophos
-import partner11 from '../../../assets/Clients/Partner11.png'; // Kristel Communication
-import partner12 from '../../../assets/Clients/Partner12.png'; // Dell Technologies
-import partner13 from '../../../assets/Clients/Partner13.png'; // DOSIKI LTD
-import partner14 from '../../../assets/Clients/Partner14.png'; // Lenovo 360 Infrastructure
-import partner15 from '../../../assets/Clients/Partner15.png'; // Lenovo 360 Intelligent
-import partner16 from '../../../assets/Clients/Partner16.png'; // Microsoft Solutions Partner (Modern Work)
-import partner17 from '../../../assets/Clients/Partner17.png'; // Microsoft Partner
-import partner18 from '../../../assets/Clients/Partner18.png'; // Placeholder
+import partner9 from '../../../assets/Clients/Partner9.png';
+import partner10 from '../../../assets/Clients/Partner10.png';
+import partner11 from '../../../assets/Clients/Partner11.png';
+import partner12 from '../../../assets/Clients/Partner12.png';
+import partner13 from '../../../assets/Clients/Partner13.png';
+import partner14 from '../../../assets/Clients/Partner14.png';
+import partner15 from '../../../assets/Clients/Partner15.png';
+import partner16 from '../../../assets/Clients/Partner16.png';
+import partner17 from '../../../assets/Clients/Partner17.png';
+import partner18 from '../../../assets/Clients/Partner18.png';
 
 // --- Grouped Arrays ---
 const partnerLogos = [
@@ -61,10 +62,11 @@ const PartnersSection = () => {
           We are trusted by leading organizations to deliver exceptional IT solutions and services. Our partnerships are a testament to our commitment to quality and results.
         </p>
 
+        {/* Partners */}
         <h3 className="subsection-title">Technology & Strategic Partners</h3>
-        <div className="partners-grid">
+        <Marquee direction="right" speed={40} pauseOnHover={true} gradient={false}>
           {partnerLogos.map((logo, index) => (
-            <div className="partner-logo-item" key={index} data-aos="fade-right">
+            <div className="partner-logo-item" key={`partner-${index}`}>
               <img src={logo.src} alt={logo.alt} className="partner-logo-img" />
               <div className="partner-info-overlay overlay-one">
                 <h4>{logo.alt}</h4>
@@ -72,12 +74,13 @@ const PartnersSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Marquee>
 
+        {/* Clients */}
         <h3 className="subsection-title">Our Clients</h3>
-        <div className="partners-grid">
+        <Marquee direction="left" speed={40} pauseOnHover={true} gradient={false}>
           {clientLogos.map((logo, index) => (
-            <div className="partner-logo-item" key={index} data-aos="fade-left">
+            <div className="partner-logo-item" key={`client-${index}`}>
               <img src={logo.src} alt={logo.alt} className="partner-logo-img" />
               <div className="partner-info-overlay overlay-two">
                 <h4>{logo.alt}</h4>
@@ -85,7 +88,7 @@ const PartnersSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Marquee>
       </div>
     </section>
   );

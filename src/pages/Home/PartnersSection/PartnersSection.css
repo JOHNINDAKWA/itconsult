@@ -1,5 +1,5 @@
 /* =============================
-   Partners Section - Revamped
+   Partners Section - Marquee Style
    ============================= */
 
 .partners-section {
@@ -37,28 +37,18 @@
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--accent-teal, #01a1a1);
-  /* border-bottom: 2px solid var(--accent-teal); */
   display: inline-block;
   padding-bottom: 0.3rem;
-  transition: border-color 0.3s ease;
 }
 
-.subsection-title:hover {
-  border-color: var(--white);
-}
-
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2.5rem 2rem;
-  margin-bottom: 4rem;
-  justify-items: center;
-}
+/* =============================
+   Logo Cards (scrolling items)
+   ============================= */
 
 .partner-logo-item {
   position: relative;
   width: 200px;
-  height: 160px;
+  height: 150px;
   background: radial-gradient(circle at center, rgba(59, 103, 133, 0.2), rgba(10, 20, 30, 0.1));
   border-radius: 14px;
   overflow: hidden;
@@ -67,6 +57,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-inline: 1.25rem; /* ⬅️ spacing between scrolling items */
+  flex: 0 0 auto;
 }
 
 .partner-logo-item:hover {
@@ -74,7 +66,6 @@
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
 }
 
-/* Logo Image */
 .partner-logo-img {
   max-width: 90%;
   max-height: 90%;
@@ -88,7 +79,10 @@
   opacity: 0.1;
 }
 
-/* Overlay Base */
+/* =============================
+   Overlay Info
+   ============================= */
+
 .partner-info-overlay {
   position: absolute;
   width: 100%;
@@ -107,7 +101,6 @@
   transition: all 0.4s ease-in-out;
 }
 
-/* Directional overlay animation */
 .overlay-one {
   bottom: -100%;
   left: 0;
@@ -130,7 +123,6 @@
   pointer-events: auto;
 }
 
-/* Overlay Text */
 .partner-info-overlay h4 {
   font-size: 1rem;
   font-weight: 600;
@@ -145,7 +137,7 @@
   max-width: 90%;
 }
 
-/* Glow ring effect */
+/* Glow Effect */
 .partner-logo-item::before {
   content: "";
   position: absolute;
@@ -162,21 +154,18 @@
 }
 
 /* =============================
-   Mobile Friendly Adjustments
+   Mobile Friendly
    ============================= */
+
 @media (max-width: 768px) {
   .partners-section {
     padding: 60px 0;
   }
 
-  .partners-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1.5rem 1rem;
-  }
-
   .partner-logo-item {
     width: 140px;
     height: 110px;
+    margin-inline: 0.75rem;
   }
 
   .partner-info-overlay {
