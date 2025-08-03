@@ -153,29 +153,7 @@ const Footer = () => {
               <li>
                 <Link to="/contact">Contact</Link>
               </li>
-              {/* Updated links to open the modal */}
-              <li>
-                <a
-                  onClick={() =>
-                    openModal("Website Disclaimer", DisclaimerText)
-                  }
-                >
-                  Disclaimer
-                </a>
-              </li>
-              <li>
-                <a onClick={() => openModal("Terms Of Use", TermsOfUseText)}>
-                  Terms Of Use
-                </a>
-              </li>
-
-              <li>
-                <a
-                  onClick={() => openModal("Privacy Policy", PrivacyPolicyText)}
-                >
-                  Privacy Policy
-                </a>
-              </li>
+           
             </ul>
           </div>
 
@@ -206,7 +184,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                LinkedIn
+                <FaLinkedinIn className="footer-social-icon" />
               </a>
             </div>
             <p className="footer-newsletter-text">
@@ -220,6 +198,13 @@ const Footer = () => {
             </Link>
           </div>
         </div>
+
+
+        <div className="footer-legal-links">
+  <button onClick={() => openModal("Website Disclaimer", DisclaimerText)}>Disclaimer</button>
+  <button onClick={() => openModal("Terms Of Use", TermsOfUseText)}>Terms of Use</button>
+  <button onClick={() => openModal("Privacy Policy", PrivacyPolicyText)}>Privacy Policy</button>
+</div>
 
         <div className="footer-copyright">
           <div className="container">
