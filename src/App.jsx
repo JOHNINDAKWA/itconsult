@@ -21,6 +21,7 @@ import ManagedITjsx from './pages/Services/ManagedIT/ManagedIT.jsx';
 import ITAdvisory from './pages/Services/ITAdvisory/ITAdvisory';
 import TechSourcing from './pages/Services/TechSourcing/TechSourcing';
 import Grace from './pages/Services/Grc/Grace.jsx';
+import CookieConsent from './components/CookieConsent/CookieConsent.JSX';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
       </ArticleProvider>
 
       <Footer />
+      <CookieConsent /> {/* Add the cookie consent component here */}
     </Router>
   );
 }

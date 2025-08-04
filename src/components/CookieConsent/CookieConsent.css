@@ -1,0 +1,95 @@
+
+/* src/components/CookieConsent.css */
+
+/* Main container for the cookie consent message */
+.cookie-consent-container {
+  position: fixed; /* Fixed position to stay at the bottom of the viewport */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* High z-index to ensure it's on top of other content */
+  background-color: var(--secondary-dark-bg); /* Use a dark background */
+  color: var(--text-light); /* Light text color */
+  padding: 1rem 1.5rem;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 1rem; /* Rounded corners at the top */
+  border-top-right-radius: 1rem;
+}
+
+/* Content wrapper for better layout on different screen sizes */
+.cookie-consent-content {
+  max-width: 1200px; /* Limit width for readability */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* Stack on smaller screens */
+  align-items: center; /* Center items on smaller screens */
+  gap: 1.5rem; /* Space between text and buttons */
+}
+
+/* Text paragraph styling */
+.cookie-consent-text {
+  flex-grow: 1; /* Allow the text to take up available space */
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Link inside the text */
+.cookie-consent-text a {
+  color: #6ee7b7; /* A teal color for the link */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.cookie-consent-text a:hover {
+  color: #2dd4bf; /* A brighter teal on hover */
+}
+
+/* Action buttons container */
+.cookie-consent-actions {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0; /* Prevent buttons from shrinking */
+}
+
+/* Common button styling */
+.cookie-consent-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Accept button styling */
+.accept-btn {
+  background-color: #6ee7b7; /* Teal background */
+  color: #000;
+  border-color: #6ee7b7;
+}
+
+.accept-btn:hover {
+  background-color: #34d399; /* Darker teal on hover */
+  border-color: #34d399;
+}
+
+/* Decline button styling */
+.decline-btn {
+  background-color: transparent;
+  color: var(--text-light);
+  border-color: var(--text-light);
+}
+
+.decline-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .cookie-consent-content {
+    flex-direction: row; /* Display items in a row on larger screens */
+    justify-content: space-between;
+  }
+}
