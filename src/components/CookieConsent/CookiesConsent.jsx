@@ -1,8 +1,8 @@
 // src/components/CookieConsent.jsx
 import React, { useState, useEffect } from 'react';
-import './CookieConsent.css';
+import './CookiesConsent.css';
 
-const CookieConsent = () => {
+const CookiesConsent = () => {
   // State to manage the visibility of the banner
   const [isVisible, setIsVisible] = useState(false);
 
@@ -58,4 +58,4 @@ const CookieConsent = () => {
   );
 };
 
-export default CookieConsent;
+export default CookiesConsent;
