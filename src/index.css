@@ -91,6 +91,7 @@ p {
 .btn-primary:hover {
   background-color: var(--accent-teal-dark);
   border-color: var(--accent-teal-dark);
+  color: var(--white);
 }
 
 .btn-outline {
