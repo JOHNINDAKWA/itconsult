@@ -104,7 +104,7 @@
 /* What You Gain Section (New Design) */
 .gains-section-alt {
   padding: 80px 0;
-  background-color: var(--secondary-dark-bg);
+    background-color: var(--primary-bg);
 }
 
 .gains-title-alt {
