@@ -1,6 +1,6 @@
 // src/pages/Services.jsx
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom";
 import "./Services.css";
 import {
   FaRegLightbulb,
@@ -12,12 +12,13 @@ import {
   FaCubes,
   FaCode,
   FaChartLine,
-  FaComments,
-  FaTools,
-  FaHandshake,
-  FaCheckCircle,
-  FaGlobe,
 } from "react-icons/fa";
+
+// Import the background images
+import itAdvisoryBg from "../../assets/managed-it3.jpg"; // Replace with your actual image paths
+import grcBg from "../../assets/grc-hero.jpg";
+import managedItBg from "../../assets/maneged-it2.jpg";
+import techSourcingBg from "../../assets/service-dark.jpg";
 
 const Services = () => {
   return (
@@ -47,71 +48,109 @@ const Services = () => {
       <section className="services-section-cards">
         <div className="services-container services-cards-grid">
           {/* IT Advisory & Consulting Card */}
-          <Link to="/services/it-advisory" className="services-card services-step-0">
-            <div className="services-card-header">
-              <h3>IT Advisory & Consulting</h3>
-              <span className="services-icon">
-                <FaRegLightbulb />
-              </span>
-            </div>
-            <p>
-              Helping your business use technology in a smarter, more strategic
-              way.
-            </p>
-            <div className="services-card-link-container">
-              <span className="services-card-link">View More <FaArrowRight /></span>
+          {/* We'll use inline styles to apply the background image from the imported variable */}
+          <Link
+            to="/services/it-advisory"
+            className="services-card services-step-0"
+            style={{ backgroundImage: `url(${itAdvisoryBg})` }}
+          >
+            <div className="card-overlay"></div>
+            <div className="services-card-content">
+              <div className="services-card-header">
+                <h3>IT Advisory & Consulting</h3>
+                <span className="services-icon">
+                  <FaRegLightbulb />
+                </span>
+              </div>
+              <p>
+                Helping your business use technology in a smarter, more strategic
+                way.
+              </p>
+              <div className="services-card-link-container">
+                <span className="services-card-link">
+                  View More <FaArrowRight />
+                </span>
+              </div>
             </div>
           </Link>
 
           {/* Governance, Risk & Compliance Card */}
-          <Link to="/services/grc" className="services-card services-step-1">
-            <div className="services-card-header">
-              <h3>Governance, Risk & Compliance</h3>
-              <span className="services-icon">
-                <FaShieldAlt />
-              </span>
-            </div>
-            <p>
-              Making sure your data and systems are secure, legal, and
-              resilient.
-            </p>
-            <div className="services-card-link-container">
-              <span className="services-card-link">View More <FaArrowRight /></span>
+          <Link
+            to="/services/grc"
+            className="services-card services-step-1"
+            style={{ backgroundImage: `url(${grcBg})` }}
+          >
+            <div className="card-overlay"></div>
+            <div className="services-card-content">
+              <div className="services-card-header">
+                <h3>Governance, Risk & Compliance</h3>
+                <span className="services-icon">
+                  <FaShieldAlt />
+                </span>
+              </div>
+              <p>
+                Making sure your data and systems are secure, legal, and
+                resilient.
+              </p>
+              <div className="services-card-link-container">
+                <span className="services-card-link">
+                  View More <FaArrowRight />
+                </span>
+              </div>
             </div>
           </Link>
 
           {/* Managed IT Services Card */}
-          <Link to="/services/managed-it" className="services-card services-step-2">
-            <div className="services-card-header">
-              <h3>Managed IT Services</h3>
-              <span className="services-icon">
-                <FaServer />
-              </span>
-            </div>
-            <p>We manage your IT so you don’t have to worry about it.</p>
-            <div className="services-card-link-container">
-              <span className="services-card-link">View More <FaArrowRight /></span>
+          <Link
+            to="/services/managed-it"
+            className="services-card services-step-2"
+            style={{ backgroundImage: `url(${managedItBg})` }}
+          >
+            <div className="card-overlay"></div>
+            <div className="services-card-content">
+              <div className="services-card-header">
+                <h3>Managed IT Services</h3>
+                <span className="services-icon">
+                  <FaServer />
+                </span>
+              </div>
+              <p>We manage your IT so you don’t have to worry about it.</p>
+              <div className="services-card-link-container">
+                <span className="services-card-link">
+                  View More <FaArrowRight />
+                </span>
+              </div>
             </div>
           </Link>
 
           {/* Technology Sourcing & Projects Card */}
-          <Link to="/services/tech-sourcing" className="services-card services-step-3">
-            <div className="services-card-header">
-              <h3>Technology Sourcing & Projects</h3>
-              <span className="services-icon">
-                <FaProjectDiagram />
-              </span>
-            </div>
-            <p>
-              We help you find, implement, and adopt the right technology
-              end-to-end.
-            </p>
-            <div className="services-card-link-container">
-              <span className="services-card-link">View More <FaArrowRight /></span>
+          <Link
+            to="/services/tech-sourcing"
+            className="services-card services-step-3"
+            style={{ backgroundImage: `url(${techSourcingBg})` }}
+          >
+            <div className="card-overlay"></div>
+            <div className="services-card-content">
+              <div className="services-card-header">
+                <h3>Technology Sourcing & Projects</h3>
+                <span className="services-icon">
+                  <FaProjectDiagram />
+                </span>
+              </div>
+              <p>
+                We help you find, implement, and adopt the right technology
+                end-to-end.
+              </p>
+              <div className="services-card-link-container">
+                <span className="services-card-link">
+                  View More <FaArrowRight />
+                </span>
+              </div>
             </div>
           </Link>
         </div>
       </section>
+
 
       {/* Redesigned Service Delivery Framework Section */}
       <section className="framework-section">

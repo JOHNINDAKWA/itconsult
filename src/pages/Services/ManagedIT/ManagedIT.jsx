@@ -15,6 +15,7 @@ import {
 import ManagedItImage from '../../../assets/managed-it-hero.jpg';
 import DeviceBuyback from '../../../assets/device-buyback.jpg'; 
 import './ManagedIT.css';
+import OtherServices from '../OtherServices/OtherServices';
 
 const ManagedIT = () => {
   return (
@@ -157,6 +158,9 @@ const ManagedIT = () => {
           </div>
         </div>
       </section>
+
+
+           <OtherServices currentServiceLink="/services/managed-it" />
 
       {/* New CTA Section */}
       <section id="managed-it-cta" className="managed-it-cta-section">

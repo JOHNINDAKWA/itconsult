@@ -14,6 +14,7 @@ import {
 import { Link } from 'react-router-dom'; // Import Link
 import Gains from '../../../assets/gains.png';
 import './ITAdvisory.css';
+import OtherServices from '../OtherServices/OtherServices';
 
 const ITAdvisory = () => {
   return (
@@ -118,6 +119,8 @@ const ITAdvisory = () => {
             </div>
 
           </div>
+
+           <OtherServices currentServiceLink="/services/it-advisory" />
           
           {/* New CTA Section */}
           <div className="cta-section">

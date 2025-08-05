@@ -148,7 +148,7 @@
 .tech-sourcing-cta {
   background-color: var(--primary-dark-bg);
   padding: 3rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
 .tech-sourcing-cta-grid {

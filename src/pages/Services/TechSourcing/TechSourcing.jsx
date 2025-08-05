@@ -13,6 +13,7 @@ import {
 } from 'react-icons/fa';
 import TechSourcingImage from '../../../assets/service-dark.jpg'; // Placeholder hero image
 import './TechSourcing.css';
+import OtherServices from '../OtherServices/OtherServices';
 
 const TechSourcing = () => {
   return (
@@ -90,6 +91,8 @@ const TechSourcing = () => {
           </div>
         </div>
       </section>
+
+           <OtherServices currentServiceLink="/services/tech-sourcing" />
 
       {/* CTA Section (New Design) */}
       <section id="tech-sourcing-cta" className="tech-sourcing-cta">

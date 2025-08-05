@@ -1,0 +1,181 @@
+/* src/components/OtherServices.css */
+
+/* --- Other Services Section --- */
+.other-services-section {
+    padding: 80px 0;
+    background-color: var(--primary-bg);
+}
+
+.other-services-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.other-services-subtitle {
+    color: var(--accent-teal);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.other-services-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+}
+
+/* --- Service Card Grid --- */
+.other-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* --- Individual Card Styling --- */
+.other-services-card {
+    position: relative;
+    height: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay for readability and hover effect */
+.other-services-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Initial state: Dark gradient for high contrast */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%);
+    transition: background 0.3s ease;
+}
+
+/* Content container */
+.other-services-card-content {
+    position: relative;
+    z-index: 2;
+    padding: 1.5rem;
+    color: var(--white);
+    transition: transform 0.3s ease;
+}
+
+.other-services-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.other-services-card-description {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.other-services-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-teal);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.other-services-card-link svg {
+    transition: transform 0.3s ease;
+}
+
+/* --- Hover Effects --- */
+.other-services-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.other-services-card:hover .other-services-card-overlay {
+    /* Hover state: A gradient with the accent color, but still dark at the bottom to maintain readability */
+    background: linear-gradient(to top, rgba(0, 161, 161, 0.8) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.other-services-card:hover .other-services-card-content {
+    transform: translateY(-5px);
+}
+
+.other-services-card:hover .other-services-card-link {
+    color: var(--white); /* Ensure the link text is white for contrast */
+}
+
+.other-services-card:hover .other-services-card-description {
+    color: var(--white); /* Change description to white for better visibility */
+}
+
+/* --- NEW: All Services CTA Button --- */
+.other-services-cta-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.other-services-cta-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--accent-teal);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 2px solid var(--accent-teal);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.other-services-cta-btn:hover {
+    background-color: var(--accent-teal);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 161, 161, 0.4);
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .other-services-section {
+        padding: 60px 0;
+    }
+    
+    .other-services-title {
+        font-size: 2rem;
+    }
+
+    .other-services-grid {
+        gap: 1.5rem;
+    }
+    
+    .other-services-card {
+        height: 250px;
+    }
+
+    .other-services-card-title {
+        font-size: 1.3rem;
+    }
+    
+    .other-services-card-description {
+        font-size: 0.9rem;
+    }
+
+    .other-services-cta-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}

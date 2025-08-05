@@ -16,6 +16,7 @@ import {
 import GRCImage from '../../../assets/grc-hero.jpg';
 import GainsImage from '../../../assets/gains3.jpg'; 
 import './Grace.css';
+import OtherServices from '../OtherServices/OtherServices';
 
 const Grace = () => {
   return (
@@ -108,6 +109,9 @@ const Grace = () => {
               <img src={GainsImage} alt="Person thinking about gains" />
             </div>
           </div>
+
+
+               <OtherServices currentServiceLink="/services/grc" />
           
           {/* Call-to-Action (CTA) Section */}
           <div className="cta-section">
