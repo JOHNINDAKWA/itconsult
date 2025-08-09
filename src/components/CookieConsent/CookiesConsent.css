@@ -1,95 +1,140 @@
+/* ============================
+   Cookie Consent – Pretty Glass Card
+   ============================ */
 
-/* src/components/CookieConsent.css */
+:root {
+  --cc-accent: var(--accent-teal, #00bfa5);    
+  --cc-bg: rgba(18, 18, 18, 0.6);
+  --cc-border: rgba(255, 255, 255, 0.12);
+  --cc-text: var(--text-light, #e9eef2);
+  --cc-white: var(--white, #fff);
+}
 
-/* Main container for the cookie consent message */
+/* Position the container centered at the bottom */
 .cookie-consent-container {
-  position: fixed; /* Fixed position to stay at the bottom of the viewport */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* High z-index to ensure it's on top of other content */
-  background-color: var(--secondary-dark-bg); /* Use a dark background */
-  color: var(--text-light); /* Light text color */
-  padding: 1rem 1.5rem;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
-  border-top-left-radius: 1rem; /* Rounded corners at the top */
-  border-top-right-radius: 1rem;
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  display: flex; justify-content: center; padding: 0 16px;
+  z-index: 1000;
+  pointer-events: none; /* card handles interactions */
 }
 
-/* Content wrapper for better layout on different screen sizes */
+/* The floating glass card */
+.cookie-consent-card {
+  pointer-events: auto;
+  width: min(960px, 100%);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)) /* soft sheen */,
+    var(--cc-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--cc-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  padding: 18px 20px;
+  position: relative;
+  animation: cc-slide-up 380ms cubic-bezier(.22,.61,.36,1) both;
+}
+
+/* Decorative gradient ribbon at the top edge */
+.cookie-consent-card::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px; border-top-left-radius: 16px; border-top-right-radius: 16px;
+  background: linear-gradient(90deg, var(--cc-accent), #39f1c8, var(--cc-accent));
+  opacity: 0.85;
+}
+
+
+
+/* Layout inside the card */
 .cookie-consent-content {
-  max-width: 1200px; /* Limit width for readability */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; /* Stack on smaller screens */
-  align-items: center; /* Center items on smaller screens */
-  gap: 1.5rem; /* Space between text and buttons */
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px 20px;
+  align-items: center;
 }
 
-/* Text paragraph styling */
 .cookie-consent-text {
-  flex-grow: 1; /* Allow the text to take up available space */
-  text-align: center;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  margin: 0;
+  color: var(--cc-text);
+  font-size: 0.98rem;
+  line-height: 1.55;
 }
 
-/* Link inside the text */
 .cookie-consent-text a {
-  color: #6ee7b7; /* A teal color for the link */
+  color: var(--cc-accent);
   text-decoration: underline;
-  transition: color 0.3s ease;
+  text-underline-offset: 2px;
+  transition: color .25s ease;
 }
+.cookie-consent-text a:hover { color: #2ad0c0; }
 
-.cookie-consent-text a:hover {
-  color: #2dd4bf; /* A brighter teal on hover */
-}
-
-/* Action buttons container */
+/* Actions */
 .cookie-consent-actions {
-  display: flex;
-  gap: 1rem;
-  flex-shrink: 0; /* Prevent buttons from shrinking */
+  display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end;
 }
 
-/* Common button styling */
+/* Buttons */
 .cookie-consent-btn {
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  border: 2px solid transparent;
+  appearance: none; border: 1px solid transparent;
+  padding: 10px 18px; border-radius: 999px;
+  font-weight: 700; font-size: 0.95rem;
+  letter-spacing: .2px; cursor: pointer;
+  transition: transform .18s ease, box-shadow .25s ease, background-color .25s ease, color .25s ease, border-color .25s ease;
+  outline: none;
 }
 
-/* Accept button styling */
+/* Accept – solid gradient pill */
 .accept-btn {
-  background-color: #6ee7b7; /* Teal background */
-  color: #000;
-  border-color: #6ee7b7;
+  background: linear-gradient(135deg, var(--cc-accent), #39f1c8);
+  color: #05181a;
+  box-shadow: 0 8px 22px rgba(1,161,161,0.35);
 }
+.accept-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 26px rgba(1,161,161,0.45); }
+.accept-btn:active { transform: translateY(0); }
+.accept-btn:focus-visible { box-shadow: 0 0 0 3px rgba(1,161,161,0.35); }
 
-.accept-btn:hover {
-  background-color: #34d399; /* Darker teal on hover */
-  border-color: #34d399;
-}
-
-/* Decline button styling */
+/* Decline – soft outline */
 .decline-btn {
-  background-color: transparent;
-  color: var(--text-light);
-  border-color: var(--text-light);
+  background: transparent;
+  color: var(--cc-text);
+  border-color: rgba(255,255,255,0.25);
 }
-
 .decline-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: var(--white);
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.45);
+}
+.decline-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.25);
 }
 
-/* Responsive adjustments */
-@media (min-width: 768px) {
+/* Mobile stacking */
+@media (max-width: 720px) {
+  .cookie-consent-card { padding: 16px; }
   .cookie-consent-content {
-    flex-direction: row; /* Display items in a row on larger screens */
-    justify-content: space-between;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: left;
   }
+  .cookie-consent-actions { justify-content: flex-start; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .cookie-consent-card { animation: none; }
+  .cookie-consent-btn { transition: none; }
+}
+
+/* Slide-up animation */
+@keyframes cc-slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Keyboard focus visibility for links inside text */
+.cookie-consent-text a:focus-visible {
+  outline: 2px solid var(--cc-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
 }

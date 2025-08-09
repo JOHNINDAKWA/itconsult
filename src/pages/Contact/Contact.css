@@ -295,6 +295,11 @@
   border-color: #a38c6f;
 }
 
+.linkedin-hover:hover{
+  color: #0076b5a4 !important;
+  text-decoration: underline;
+}
+
 @media (max-width: 992px) {
   .contact-page-wrapper {
     margin-top: 0.5rem;

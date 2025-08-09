@@ -106,34 +106,25 @@ const CookiesConsent = () => {
   return (
     <>
       <div className="cookie-consent-container">
-        <div className="cookie-consent-content">
-          <p className="cookie-consent-text">
-            We use cookies to ensure you get the best experience on our website.
-            By using our website, you agree to our{" "}
-            <a
-              onClick={() => openModal("Privacy Policy", PrivacyPolicyText)}
-              className="text-teal-400 hover:underline"
-            >
-              Privacy Policy
-            </a>
-            .
-          </p>
-          <div className="cookie-consent-actions">
-            <button
-              onClick={handleAccept}
-              className="cookie-consent-btn accept-btn"
-            >
-              Accept
-            </button>
-            <button
-              onClick={handleDecline}
-              className="cookie-consent-btn decline-btn"
-            >
-              Decline
-            </button>
-          </div>
-        </div>
+  <div className="cookie-consent-card">
+    <div className="cookie-consent-content">
+      <p className="cookie-consent-text">
+        We use cookies to ensure you get the best experience on our website.
+        By using our website, you agree to our{" "}
+        <a onClick={() => openModal("Privacy Policy", PrivacyPolicyText)}>Privacy Policy</a>.
+      </p>
+      <div className="cookie-consent-actions">
+        <button onClick={handleDecline} className="cookie-consent-btn decline-btn">
+          Decline
+        </button>
+        <button onClick={handleAccept} className="cookie-consent-btn accept-btn">
+          Accept
+        </button>
       </div>
+    </div>
+  </div>
+</div>
+
       <LegalModal
         isOpen={isModalOpen}
         onClose={closeModal}

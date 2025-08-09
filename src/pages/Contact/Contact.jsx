@@ -162,7 +162,7 @@ const Contact = () => {
                 <span>info@itconsult.africa</span>
               </div>
               <div className="contact-info-item">
-                <FaLinkedin />
+                <FaLinkedin className="linkedin-hover"/>
                 <span>
                   {" "}
                   <a
@@ -170,6 +170,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
+                    className="linkedin-hover"
                   >
                     LinkedIn
                   </a>
