@@ -1,379 +1,305 @@
 /* src/pages/ManagedIT.css */
 
-/* General Styles */
-.managed-it-page {
-  background-color: var(--primary-bg);
-  color: var(--text-light);
+/* Match the hero+overlay structure used elsewhere */
+.managedit-bg {
+  background: url('../../../assets/managed-it-hero.jpg') center center / cover no-repeat fixed;
+  position: relative;
 }
 
-/* Hero Section */
-.managed-it-hero {
-  padding: 50px 0;
-  background-color: #161317; /* Use a solid dark color */
-}
-
-.managed-it-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 3rem;
-}
-
-.managed-it-image {
-  flex: 1 1 50%;
-}
-
-.managed-it-image img {
+.managedit-bg .overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 80px 0;
   width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.managed-it-content {
-  flex: 1 1 50%;
-}
-
-.managed-it-title {
+/* Title & Intro (same tokens as other pages) */
+.services-detail-title {
   font-size: 2.5rem;
   color: var(--white);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
   font-family: var(--font-family-serif);
 }
 
-.managed-it-subtitle {
-  color: var(--accent-teal);
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
-.managed-it-description {
+.services-detail-intro {
   color: var(--text-muted);
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
 }
 
-/* Service Highlights */
-.managed-it-highlights {
+/* Grid structure shared with other service pages */
+.services-detail-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-.highlight-card {
+/* Cards (styling consistent with advisory/grc cards) */
+.managed-card {
   background-color: var(--secondary-dark-bg);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
+  gap: 1.5rem;
   align-items: flex-start;
-  gap: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-.highlight-icon {
-  font-size: 1.4rem;
-  color: var(--accent-teal);
-  background-color: rgba(255, 255, 255, 0.05);
-  width: 40px;
-  height: 40px;
+.managed-card:hover {
+  transform: translateY(-5px);
+}
+
+.advisory-icon {
+  font-size: 1.8rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--accent-teal);
   flex-shrink: 0;
 }
 
-.highlight-card h3 {
+.advisory-content h3 {
   color: var(--white);
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
   font-weight: 600;
 }
 
-.highlight-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-/* Device Buyback Section */
-.buyback-section {
-  padding: 80px 0;
-  background-color: var(--secondary-dark-bg);
-}
-
-.buyback-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4rem;
-}
-
-.buyback-content {
-  flex: 1 1 50%;
-}
-
-.buyback-image {
-  flex: 1 1 40%;
-}
-
-.buyback-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.buyback-title {
-  color: var(--white);
-  font-size: 2rem;
-  font-family: var(--font-family-serif);
-  margin-bottom: 1rem;
-}
-
-.buyback-description {
+.advisory-content p {
   color: var(--text-muted);
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
 }
 
-.buyback-content ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 1.5rem;
-}
-
-.buyback-content li {
+/* Service Spotlight band (Device Buyback) — fits seamlessly */
+.service-spotlight {
+  background-color: var(--secondary-dark-bg);
+  border-radius: 12px;
+  padding: 2.5rem;
   display: flex;
+  gap: 2rem;
   align-items: center;
-  gap: 0.75rem;
-  color: var(--text-light);
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 0.5rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  margin-bottom: 3rem;
 }
 
-.buyback-content li svg {
+.service-spotlight .spotlight-content {
+  flex: 1;
+}
+
+.service-spotlight h4 {
   color: var(--accent-teal);
-}
-
-.buyback-callout {
-  color: var(--accent-teal);
-  font-style: italic;
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-top: 2rem;
-}
-
-/* What You Gain Section (New Design) */
-.gains-section {
-  padding: 80px 0;
-  text-align: center;
-}
-
-.gains-title {
-  color: var(--accent-teal);
-  font-size: 1.5rem;
-  margin-bottom: 2.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.gains-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+.service-spotlight p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
 }
 
-.gains-card {
-  background-color: var(--secondary-dark-bg);
-  padding: 2.5rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+.spotlight-list {
+  list-style: none;
+  padding-left: 0;
 }
 
-.gains-card:hover {
-  transform: translateY(-5px);
-}
-
-.gains-icon-circle {
-  width: 70px;
-  height: 70px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
+.spotlight-list li {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto 1.5rem;
+  gap: 0.6rem;
+  color: var(--text-light);
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.spotlight-list li svg {
   color: var(--accent-teal);
-  font-size: 2rem;
+  flex-shrink: 0;
 }
 
-.gains-card h3 {
-  color: var(--white);
+.service-spotlight .spotlight-image {
+  flex: 1;
+  text-align: right;
+}
+
+.service-spotlight .spotlight-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* What You Gain (same layout as others) */
+.services-gains-upgraded {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.gains-content {
+  flex: 1;
+}
+
+.gains-content h4 {
+  color: var(--accent-teal);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gains-content ul {
+  list-style: none;
+}
+
+.gains-content li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.gains-icon {
+  color: var(--accent-teal);
   font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.gains-image {
+  flex: 1;
+  text-align: right;
+}
+
+.gains-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* CTA — reuse the global CTA look from other pages */
+.cta-section {
+  background-color: var(--secondary-dark-bg);
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.cta-title {
+  color: var(--white);
+  font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  font-family: var(--font-family-serif);
 }
 
-.gains-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
+.cta-subtitle {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* src/pages/ManagedIT.css */
-/* ... (Keep all existing CSS styles above this point) ... */
-
-/* CTA Section (New Design) */
-.managed-it-cta-section {
-    /* Use a linear gradient for a modern, beautiful look */
-    background: linear-gradient(135deg, var(--secondary-dark-bg), #0f0c0f);
-    padding: 5rem 0; /* Increase padding for more breathing room */
-    text-align: center;
-    border-radius: 16px; /* Add rounded corners to the section */
-    margin: 4rem auto; /* Center the section and add margin */
-    max-width: 1200px; /* Limit width to make it a contained card-like section */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Add a deep shadow for depth */
-    position: relative; /* For the background elements */
-    overflow: hidden; /* To contain pseudo-elements */
+.cta-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Subtle background pattern/element for visual interest */
-/* .managed-it-cta-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-    background-size: 15px 15px;
-    opacity: 0.2;
-    z-index: 0;
-} */
-
-.managed-it-cta-section .cta-content {
-    margin-bottom: 2.5rem; /* Slightly more space */
-    position: relative; /* Bring content to the front */
-    z-index: 5;
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 191, 165, 0.3);
 }
 
-.managed-it-cta-section .cta-title {
-    font-size: 2rem; /* Make the title larger and more impactful */
-    color: var(--white); /* Use pure white for a strong contrast */
-    font-weight: 800; /* Bolder font weight */
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-    text-transform: capitalize;
-}
-
-.managed-it-cta-section .cta-subtitle {
-    color: var(--text-muted); /* A slightly lighter, more readable gray */
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.managed-it-cta-section .cta-btn {
-    background: var(--accent-teal); /* The button has a solid accent color */
-    color: var(--primary-bg);
-    border: none;
-    padding: 1.2rem 3.5rem; /* Larger padding for a more substantial button */
-    font-size: 1.2rem;
-    font-weight: 700; /* Bolder button text */
-    border-radius: 999px; /* Pill-shaped button */
-    box-shadow: 0 8px 15px rgba(0, 191, 165, 0.25); /* Accent-colored glow */
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother hover transition */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.managed-it-cta-section .cta-btn:hover {
-    background-color: var(--white); /* Hover to white */
-    color: var(--accent-teal); /* Text changes to accent color */
-    transform: translateY(-5px) scale(1.05); /* Lifts and slightly enlarges */
-    box-shadow: 0 10px 20px rgba(0, 191, 165, 0.4); /* Stronger hover glow */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .managed-it-cta-section {
-        padding: 3rem 1.5rem; /* Adjust padding for mobile */
-        margin: 3rem 1rem;
-    }
-    .managed-it-cta-section .cta-title {
-        font-size: 2rem; /* Reduce font size on mobile */
-    }
-    .managed-it-cta-section .cta-subtitle {
-        font-size: 1rem;
-    }
-    .managed-it-cta-section .cta-btn {
-        padding: 1rem 2.5rem;
-        font-size: 1.1rem;
-    }
-}
-
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 992px) {
-  .managed-it-grid, .buyback-grid {
+  .services-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-spotlight {
     flex-direction: column;
+    text-align: center;
+  }
+  .service-spotlight .spotlight-image {
+    text-align: center;
+  }
+
+  .services-gains-upgraded {
+    flex-direction: column;
+    text-align: center;
     gap: 2rem;
   }
-  .managed-it-image, .managed-it-content, .buyback-image, .buyback-content {
-    flex: 1 1 100%;
-  }
-  .managed-it-highlights {
-      grid-template-columns: 1fr;
-  }
-  .buyback-content {
-      order: 2; /* Put the content below the image on mobile */
-  }
-  .buyback-image {
-      order: 1; /* Put the image above the content on mobile */
+  .gains-image {
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  .managed-it-hero {
+  .managedit-bg .overlay {
     padding: 60px 0;
   }
-  .managed-it-title {
+
+  .services-detail-title {
     font-size: 2rem;
   }
-  .managed-it-subtitle {
+
+  .services-detail-intro {
     font-size: 1rem;
   }
-  .managed-it-highlights {
-    gap: 1rem;
+
+  .managed-card {
+    padding: 1.5rem;
   }
-  .buyback-section {
-    padding: 60px 0;
+
+  .advisory-content h3 {
+    font-size: 1.1rem;
   }
-  .gains-title {
-      font-size: 1.3rem;
+
+  .advisory-content p,
+  .gains-content li {
+    font-size: 0.95rem;
   }
-  .gains-card {
-      padding: 2rem 1.5rem;
+
+  .gains-content h4 {
+    font-size: 1.3rem;
   }
-  .gains-icon-circle {
-      width: 60px;
-      height: 60px;
-      font-size: 1.8rem;
+
+  .cta-section {
+    padding: 2rem 1.5rem;
   }
-  .managed-it-cta-section {
-    padding: 3rem 0;
+
+  .cta-title {
+    font-size: 1.8rem;
   }
-  .managed-it-cta-section .cta-title {
-      font-size: 1.8rem;
+
+  .cta-subtitle {
+    font-size: 1rem;
   }
-  .managed-it-cta-section .cta-subtitle {
-      font-size: 1rem;
-  }
-  .managed-it-cta-section .cta-btn {
-      font-size: 1.1rem;
-      padding: 0.8rem 2rem;
+
+  .cta-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
   }
 }

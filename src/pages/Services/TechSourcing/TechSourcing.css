@@ -1,236 +1,237 @@
 /* src/pages/TechSourcing.css */
 
-/* General Page Layout */
-.tech-sourcing-page {
-  background-color: var(--primary-bg);
-  color: var(--text-light);
+/* Hero with fixed bg + overlay (mirrors other pages) */
+.techsourcing-bg {
+  background: url('../../../assets/service-dark.jpg') center center / cover no-repeat fixed;
+  position: relative;
 }
 
-/* Hero Section */
-.tech-sourcing-section {
-  padding: 100px 0;
-  background-color: var(--primary-dark-bg);
-}
-
-.tech-sourcing-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  align-items: stretch; /* Make items the same height */
-  flex-direction: row-reverse; /* reversed layout */
-}
-
-.tech-sourcing-content {
-  flex: 1 1 50%;
-}
-
-.tech-sourcing-image {
-  flex: 1 1 45%;
-  height: 100%; /* Make the image container 100% of the grid item height */
-}
-
-.tech-sourcing-image img {
+.techsourcing-bg .overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 80px 0;
   width: 100%;
-  height: 100%; /* Make the image fill its container */
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  border-radius: 16px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-.tech-sourcing-subtitle {
-  color: var(--accent-teal);
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
-.tech-sourcing-title {
+/* Title & Intro (shared tokens) */
+.services-detail-title {
   font-size: 2.5rem;
   color: var(--white);
   margin-bottom: 1rem;
+  text-align: left;
   font-family: var(--font-family-serif);
 }
 
-.tech-sourcing-description {
+.services-detail-intro {
   color: var(--text-muted);
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
 }
 
-/* Service Highlights Grid (reused from ManagedIT, with minor tweaks) */
-.tech-sourcing-highlights {
+/* Grid reused exactly like other service pages */
+.services-detail-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-.highlight-card {
+/* Cards styled to match .advisory-card/.grc-card */
+.tech-card {
   background-color: var(--secondary-dark-bg);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
+  gap: 1.5rem;
   align-items: flex-start;
-  gap: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
-.highlight-icon {
-  font-size: 1.4rem;
-  color: var(--accent-teal);
-  background-color: rgba(255, 255, 255, 0.05);
-  width: 40px;
-  height: 40px;
+.tech-card:hover {
+  transform: translateY(-5px);
+}
+
+.advisory-icon {
+  font-size: 1.8rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--accent-teal);
   flex-shrink: 0;
 }
 
-.highlight-card h3 {
+.advisory-content h3 {
   color: var(--white);
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
   font-weight: 600;
 }
 
-.highlight-card p {
+.advisory-content p {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-/* What You Gain Section (New Design) */
-.gains-section-alt {
-  padding: 80px 0;
-    background-color: var(--primary-bg);
+/* What You Gain (same component styling) */
+.services-gains-upgraded {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  padding: 4rem 0;
 }
 
-.gains-title-alt {
+.gains-content {
+  flex: 1;
+}
+
+.gains-content h4 {
   color: var(--accent-teal);
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.gains-list-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+.gains-content ul {
+  list-style: none;
 }
 
-.gain-item {
-  background-color: var(--primary-bg);
-  padding: 1.5rem;
-  border-radius: 12px;
+.gains-content li {
   display: flex;
   align-items: center;
   gap: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
 }
 
-.gain-icon-alt {
+.gains-icon {
   color: var(--accent-teal);
   font-size: 1.2rem;
   flex-shrink: 0;
 }
 
-.gain-item p {
-  color: var(--text-light);
-  font-size: 1rem;
+.gains-image {
+  flex: 1;
+  text-align: right;
 }
 
-/* CTA Section (New Design) */
-.tech-sourcing-cta {
-  background-color: var(--primary-dark-bg);
-  padding: 3rem 0;
-  /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
+.gains-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.tech-sourcing-cta-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
+/* CTA section mirrored from other pages */
+.cta-section {
+  background-color: var(--secondary-dark-bg);
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
-.tech-sourcing-cta .cta-text h3 {
+.cta-title {
   color: var(--white);
   font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   font-family: var(--font-family-serif);
 }
 
-.tech-sourcing-cta .cta-text p {
-  color: var(--text-muted);
+.cta-subtitle {
+  color: var(--text-light);
   font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.cta-btn-alt {
-  background: var(--accent-teal);
-  color: var(--primary-bg);
-  border: 1px solid var(--accent-teal);
-  padding: 0.8rem 2.5rem;
+.cta-btn {
+  padding: 1rem 2.5rem;
   font-size: 1.1rem;
   font-weight: 600;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  flex-shrink: 0;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cta-btn-alt:hover {
-  background-color: transparent;
-  color: var(--accent-teal);
-  border-color: var(--accent-teal);
-  transform: translateY(-2px);
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 191, 165, 0.3);
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 992px) {
-  .tech-sourcing-grid {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  .tech-sourcing-image, .tech-sourcing-content {
-    flex: 1 1 100%;
-  }
-  .tech-sourcing-highlights {
+  .services-detail-grid {
     grid-template-columns: 1fr;
   }
-  .tech-sourcing-cta-grid {
+
+  .services-gains-upgraded {
     flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .gains-image {
     text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  .tech-sourcing-section {
+  .techsourcing-bg .overlay {
     padding: 60px 0;
   }
-  .tech-sourcing-title {
+
+  .services-detail-title {
     font-size: 2rem;
   }
-  .tech-sourcing-highlights {
-    gap: 1rem;
+
+  .services-detail-intro {
+    font-size: 1rem;
   }
-  .gains-section-alt {
-    padding: 60px 0;
+
+  .tech-card {
+    padding: 1.5rem;
   }
-  .gains-title-alt {
+
+  .advisory-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .advisory-content p,
+  .gains-content li {
+    font-size: 0.95rem;
+  }
+
+  .gains-content h4 {
     font-size: 1.3rem;
   }
-  .tech-sourcing-cta {
-    padding: 2rem 0;
+
+  .cta-section {
+    padding: 2rem 1.5rem;
   }
-  .tech-sourcing-cta .cta-text h3 {
+
+  .cta-title {
     font-size: 1.8rem;
   }
-  .tech-sourcing-cta .cta-text p {
+
+  .cta-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    padding: 0.8rem 2rem;
     font-size: 1rem;
   }
 }
