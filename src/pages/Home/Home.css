@@ -14,26 +14,32 @@
 
 .hero-background {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: 1; /* Below content and overlay */
-  /* Optional: Add a subtle parallax effect or animation */
-  animation: zoomBackground 20s infinite alternate ease-in-out;
+  z-index: 1;
+  /* Smooth, GPU-friendly zoom/pan */
+  animation: heroKenBurns 12s ease-in-out infinite alternate;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+/* Subtle zoom + gentle pan */
+@keyframes heroKenBurns {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: scale(1.2) translate3d(1.5%, 1.5%, 0);
+  }
 }
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity as needed for image visibility vs text readability */
-  z-index: 2; /* Between background and content */
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 2;
 }
 
 .hero-content {
@@ -45,6 +51,15 @@
   flex-direction: column;
   align-items: center; /* Center items horizontally within the flex column */
   gap: 1.5rem; /* Space between elements */
+}
+
+@media (max-width: 768px) {
+  .hero-background { animation-duration: 20s; }
+}
+
+/* Accessibility: respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero-background { animation: none; }
 }
 
 .hero-tagline {
