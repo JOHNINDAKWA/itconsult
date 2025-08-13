@@ -18,7 +18,7 @@ import {
 import itAdvisoryBg from "../../assets/managed-it3.jpg"; // Replace with your actual image paths
 import grcBg from "../../assets/grc-hero.jpg";
 import managedItBg from "../../assets/maneged-it2.jpg";
-import techSourcingBg from "../../assets/service-dark.jpg";
+import techSourcingBg from "../../assets/tech-source.jpg";
 
 const Services = () => {
   return (
