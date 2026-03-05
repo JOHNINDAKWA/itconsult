@@ -446,3 +446,26 @@
     font-size: 1.2rem;
   }
 }
+
+
+
+/* New Dropdown Elements */
+.all-services-item {
+  background-color: rgba(0, 191, 165, 0.05); /* Very subtle teal tint */
+  margin-bottom: 5px;
+}
+
+.all-services-item .dropdown-title {
+  color: var(--accent-teal); /* Highlight the "All Services" text */
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 8px 15px;
+}
+
+/* Ensure the dropdown hides when a link inside it is clicked */
+.services-dropdown-item {
+  cursor: pointer;
+}

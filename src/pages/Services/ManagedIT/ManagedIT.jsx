@@ -1,17 +1,18 @@
-// src/pages/ManagedIT.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   FaServer,
-  FaShieldAlt,
-  FaUsers,
+  FaHeadset,
+  FaSignal,
   FaChartLine,
-  FaCheck,
+  FaHandshake,
+  FaTools,
+  FaCheck
 } from 'react-icons/fa';
 
 import ManagedItImage from '../../../assets/managed-it-hero.jpg';
 import DeviceBuyback from '../../../assets/device-buyback.jpg';
-import Gains from '../../../assets/gains4.jpg'; // reuse the same style as others (or swap to another image if you prefer)
+import Gains from '../../../assets/gains4.jpg'; 
 
 import './ManagedIT.css';
 import OtherServices from '../OtherServices/OtherServices';
@@ -21,127 +22,124 @@ const ManagedIT = () => {
     <section id="managed-it" className="services-detail-section managedit-bg">
       <div className="overlay">
         <div className="container">
-          {/* Title + Intro */}
-          <h2 className="services-detail-title">Managed IT Services</h2>
+          {/* Service Pillar 03 - Header */}
+          <h2 className="services-detail-title">Managed Services</h2>
           <p className="services-detail-intro">
-            We act as your full IT department—proactively monitoring, securing, and supporting your environment so your business can stay focused on results. From infrastructure to end-user support, we keep everything running smoothly.
+            Streamlined Operations. Uninterrupted Growth. Technology should empower your team, not distract them. 
+            We provide a proactive, "always-on" IT department that anticipates problems before they occur.
           </p>
 
-          {/* Service Detail Grid (same structure as other pages) */}
+          {/* Core Specializations Grid */}
           <div className="services-detail-grid">
-            {/* Card 1 */}
+            {/* Spec 1: Infrastructure */}
             <div className="managed-card">
-              <div className="advisory-icon">
-                <FaServer />
-              </div>
+              <div className="advisory-icon"><FaServer /></div>
               <div className="advisory-content">
-                <h3>Infrastructure Management</h3>
-                <p>
-                  24/7 monitoring for servers, networks, and cloud systems with proactive maintenance and patching to reduce downtime and prevent issues before they escalate.
-                </p>
+                <h3>Proactive Managed Infrastructure</h3>
+                <p>We take full ownership of your servers and cloud environments, ensuring core systems are patched, updated, and tuned for peak performance without you lifting a finger.</p>
               </div>
             </div>
 
-            {/* Card 2 */}
+            {/* Spec 2: Helpdesk */}
             <div className="managed-card">
-              <div className="advisory-icon">
-                <FaShieldAlt />
-              </div>
+              <div className="advisory-icon"><FaHeadset /></div>
               <div className="advisory-content">
-                <h3>Security Operations (SOC)</h3>
-                <p>
-                  Threat detection, vulnerability management, and incident response—backed by clear runbooks and rapid remediation to keep your environment safe.
-                </p>
+                <h3>Rapid-Response Helpdesk</h3>
+                <p>Dedicated technical support that resolves end-user issues quickly, minimizing downtime and keeping your workforce productive and frustrated-free.</p>
               </div>
             </div>
 
-            {/* Card 3 */}
+            {/* Spec 3: Monitoring */}
             <div className="managed-card">
-              <div className="advisory-icon">
-                <FaUsers />
-              </div>
+              <div className="advisory-icon"><FaSignal /></div>
               <div className="advisory-content">
-                <h3>End-User Support</h3>
-                <p>
-                  Friendly, responsive help for your team—device setup, updates, troubleshooting, and lifecycle management to keep everyone productive.
-                </p>
+                <h3>24/7 Network Monitoring</h3>
+                <p>Advanced monitoring tools scan your network around the clock for performance dips or anomalies, allowing us to remediate issues silently in the background.</p>
               </div>
             </div>
 
-            {/* Card 4 */}
+            {/* Spec 4: Cost Optimization */}
             <div className="managed-card">
-              <div className="advisory-icon">
-                <FaChartLine />
-              </div>
+              <div className="advisory-icon"><FaChartLine /></div>
               <div className="advisory-content">
-                <h3>Performance & Cost Optimization</h3>
-                <p>
-                  Continuous analysis of usage and performance with recommendations that improve reliability and reduce waste—so you only pay for what you need.
-                </p>
+                <h3>Strategic Budgeting & ROI</h3>
+                <p>We analyse technology spend to identify redundancies and optimize cloud costs, ensuring every dollar in your IT budget drives maximum ROI.</p>
+              </div>
+            </div>
+
+            {/* Spec 5: Vendor Management */}
+            <div className="managed-card">
+              <div className="advisory-icon"><FaHandshake /></div>
+              <div className="advisory-content">
+                <h3>Vendor & License Management</h3>
+                <p>We act as your single point of contact for all technology vendors, managing software licenses and hardware warranties so you never overpay.</p>
+              </div>
+            </div>
+
+            {/* Spec 6: Lifecycle */}
+            <div className="managed-card">
+              <div className="advisory-icon"><FaTools /></div>
+              <div className="advisory-content">
+                <h3>Lifecycle Management</h3>
+                <p>We treat your IT environment like a high-performance engine, using scheduled maintenance to extend asset life and prevent emergency failures.</p>
               </div>
             </div>
           </div>
 
-          {/* Service Spotlight (Device Buyback) — tasteful band, same page style */}
+          {/* Service Spotlight (Device Buyback) */}
           <div className="service-spotlight">
             <div className="spotlight-content">
-              <h4>Service Spotlight: Device Buyback & Upgrade Support</h4>
-              <p>
-                Turn outdated laptops into value—free up budgets and boost productivity with compliant data wiping and seamless device refresh.
-              </p>
+              <h4>Service Spotlight: Device Buyback & Upgrade</h4>
+              <p>Turn outdated assets into capital. We facilitate compliant data wiping and seamless device refreshes to boost productivity.</p>
               <ul className="spotlight-list">
-                <li><FaCheck /> Assessment of device condition and fair valuation</li>
-                <li><FaCheck /> Direct purchase at market-aligned rates</li>
-                <li><FaCheck /> Offsetting costs for new equipment</li>
+                <li><FaCheck /> Assessment and fair market valuation</li>
+                <li><FaCheck /> Offsetting costs for new high-performance hardware</li>
                 <li><FaCheck /> Secure data erasure and compliant disposal</li>
               </ul>
             </div>
             <div className="spotlight-image">
-              <img src={DeviceBuyback} alt="Device Buyback & Upgrade Support" />
+              <img src={DeviceBuyback} alt="Device Buyback Support" />
             </div>
           </div>
 
-          {/* What You Gain (same pattern as others: text + image) */}
+          {/* What You Gain */}
           <div className="services-gains-upgraded">
-            {/* Left: Gains text */}
             <div className="gains-content">
               <h4>What You Gain</h4>
               <ul>
                 <li>
-                  <span className="gains-icon"><FaUsers /></span>
-                  Fast, friendly support that keeps your team moving
+                  <span className="gains-icon"><FaCheck /></span>
+                  Predictable IT costs and optimized technology spend
                 </li>
                 <li>
-                  <span className="gains-icon"><FaChartLine /></span>
-                  Predictable IT with minimal downtime and surprises
+                  <span className="gains-icon"><FaCheck /></span>
+                  Minimal downtime through 24/7 proactive monitoring
                 </li>
                 <li>
-                  <span className="gains-icon"><FaShieldAlt /></span>
-                  Strong cybersecurity posture and rapid incident handling
+                  <span className="gains-icon"><FaCheck /></span>
+                  Single point of contact for all technology vendors
                 </li>
                 <li>
-                  <span className="gains-icon"><FaServer /></span>
-                  Scalable infrastructure ready for growth
+                  <span className="gains-icon"><FaCheck /></span>
+                  Technology transformed into a seamless engine for success
                 </li>
               </ul>
             </div>
-            {/* Right: Gains image */}
             <div className="gains-image">
               <img src={Gains} alt="Managed IT outcomes" />
             </div>
           </div>
 
-          {/* Other services nav */}
           <OtherServices currentServiceLink="/services/managed-it" />
 
-          {/* CTA (same structure/style) */}
+          {/* Positioning Message CTA */}
           <div className="cta-section">
-            <h3 className="cta-title">Ready for IT that just works?</h3>
+            <h3 className="cta-title">Manage Complexity. Master Growth.</h3>
             <p className="cta-subtitle">
-              Switch to our managed services and get back to your business.
+              We eliminate the burden of daily IT management, allowing your leadership to focus on high-value business objectives.
             </p>
             <Link to="/contact" className="btn btn-primary cta-btn">
-              Get a Custom Quote
+              Get Proactive Support
             </Link>
           </div>
         </div>

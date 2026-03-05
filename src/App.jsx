@@ -22,12 +22,16 @@ import ITAdvisory from './pages/Services/ITAdvisory/ITAdvisory';
 import TechSourcing from './pages/Services/TechSourcing/TechSourcing';
 import Grace from './pages/Services/Grc/Grace.jsx';
 import CookiesConsent from './components/CookieConsent/CookiesConsent.jsx';
+import ITModernization from './pages/Services/ITModernization/ITModernization.jsx';
+import CyberSecurity from './pages/Services/CyberSecurity/CyberSecurity.jsx';
+import ScrollToHash from './components/ScrollToHash.js';
 
 function App() {
   return (
     <Router>
       {/* ScrollToTop component must be rendered inside the Router */}
       <ScrollToTop />
+      <ScrollToHash />
 
       <Navbar />
       {/* Wrap Routes with ArticleProvider to make article data available to all nested components */}
@@ -36,6 +40,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/it-modernization" element={<ITModernization />} />
+          <Route path="/services/cybersecurity" element={<CyberSecurity />} />
           <Route path="/services/grc" element={<Grace />} />
           <Route path="/services/managed-it" element={<ManagedITjsx />} />
           <Route path="/services/it-advisory" element={<ITAdvisory />} />

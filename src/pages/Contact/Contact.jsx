@@ -151,7 +151,7 @@ const Contact = () => {
               <h3 className="card-title">Contact Details</h3>
               <div className="contact-info-item">
                 <FaMapMarkerAlt />
-                <span> Indigo Cowork Space, General Mathenge</span>
+                <span>  Elysee Plaza, 3rd Floor, Kilimani Road, Nairobi </span>
               </div>
               <div className="contact-info-item">
                 <FaPhoneAlt />

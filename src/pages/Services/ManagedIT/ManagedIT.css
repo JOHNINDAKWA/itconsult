@@ -18,7 +18,7 @@
   color: var(--white);
   margin-bottom: 1rem;
   text-align: left;
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-primary);
 }
 
 .services-detail-intro {
@@ -207,7 +207,7 @@
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  font-family: var(--font-family-serif);
+  font-family: var(--font-family-primary);
 }
 
 .cta-subtitle {

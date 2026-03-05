@@ -1,0 +1,128 @@
+/* src/pages/ITModernization.css */
+
+/* The main section wrapper that carries the background image */
+.modernization-bg {
+  background: url('../../../assets/it-modernization.jpg') center center / cover no-repeat fixed;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* The dark overlay that ensures text readability */
+.modernization-bg .overlay {
+  background-color: rgba(10, 15, 25, 0.92); /* Matching the depth of other service pages */
+  padding: 100px 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Teal Accent for Service Pillar 01 */
+.modernization-bg .sec-badge {
+  background-color: var(--accent-teal);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+/* Typography & Layout Consistency */
+.services-detail-title {
+  font-size: 3.2rem;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-primary);
+}
+
+.services-detail-intro {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  margin-bottom: 3.5rem;
+  max-width: 1100px;
+  line-height: 1.8;
+}
+
+/* Grid for Specialization Cards */
+.services-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Reusing the exact card style from Managed IT for brand harmony */
+.managed-card {
+  background-color: var(--secondary-dark-bg);
+  border-radius: 12px;
+  padding: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.managed-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-teal);
+  box-shadow: 0 10px 30px rgba(0, 191, 165, 0.1);
+}
+
+.advisory-icon {
+  font-size: 2rem;
+  color: var(--accent-teal);
+}
+
+/* Spotlights and Gains styling */
+.service-spotlight {
+  background-color: var(--secondary-dark-bg);
+  border-radius: 15px;
+  padding: 3.5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.services-gains-upgraded {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.gains-icon {
+  color: var(--accent-teal);
+  margin-right: 1rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: var(--secondary-dark-bg);
+  border-radius: 15px;
+  padding: 4rem;
+  text-align: center;
+  margin-top: 4rem;
+  border: 1px solid rgba(0, 191, 165, 0.2);
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .services-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-spotlight, 
+  .services-gains-upgraded {
+    flex-direction: column;
+    text-align: center;
+  }
+  .services-detail-title {
+    font-size: 2.5rem;
+  }
+}

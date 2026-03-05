@@ -72,7 +72,7 @@
 }
 
 .about-hero-title {
-  font-family: var(--font-family-serif); /* Use Playfair Display if available */
+  font-family: var(--font-family-primary); /* Use Playfair Display if available */
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 1rem;

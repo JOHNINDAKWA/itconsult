@@ -1,0 +1,159 @@
+/* Unique wrapper to prevent global style leakage */
+.cyber-page-wrapper {
+  background: url('../../../assets/managed-it3.jpg') center center / cover no-repeat fixed;
+  min-height: 100vh;
+}
+
+.cyber-hero-overlay {
+  background-color: rgba(10, 15, 25, 0.94);
+  padding: 100px 0;
+}
+
+.cyber-badge-top {
+  background: var(--accent-teal);
+  color: #0a0f19;
+  padding: 5px 12px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.cyber-main-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: white;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family-serif);
+}
+
+.cyber-main-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 1100px;
+  margin-bottom: 4rem;
+}
+
+/* THE FIX: Explicit Grid Grid */
+.cyber-features-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important; /* Forces 2 columns */
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.cyber-feature-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 16px;
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.cyber-feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--accent-teal);
+}
+
+.cyber-card-icon {
+  color: var(--accent-teal);
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.cyber-card-text h3 {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.cyber-card-text p {
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Spotlight Section */
+.cyber-spotlight-box {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 20px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.spotlight-text h4 {
+  color: var(--accent-teal);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.spotlight-check-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.spotlight-check-list li {
+  color: white;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spotlight-check-list svg { color: var(--accent-teal); }
+
+.spotlight-img-frame img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* CTA */
+.cyber-final-cta {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg, rgba(0, 191, 165, 0.1), transparent);
+  border: 1px solid rgba(0, 191, 165, 0.2);
+  border-radius: 20px;
+}
+
+.cyber-action-btn {
+  display: inline-block;
+  background: var(--accent-teal);
+  color: #0a0f19;
+  padding: 15px 35px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.cyber-action-btn:hover {
+  background: white;
+  transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .cyber-features-grid {
+    grid-template-columns: 1fr !important; /* Stack on small screens */
+  }
+  
+  .cyber-spotlight-box {
+    grid-template-columns: 1fr;
+    padding: 30px;
+  }
+
+  .cyber-main-title { font-size: 2.2rem; }
+}
