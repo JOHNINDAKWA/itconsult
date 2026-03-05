@@ -14,7 +14,7 @@ import HeroBg from '../../../assets/managed-it3.jpg';
 import GainsImg from '../../../assets/gains4.jpg'; 
 import SpotlightImg from '../../../assets/strategy-bg.jpg';
 import OtherServices from '../OtherServices/OtherServices';
-import './Cybersecurity.css';
+import './CyberSecurity.css';
 
 const Cybersecurity = () => {
   return (
