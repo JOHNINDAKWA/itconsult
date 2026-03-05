@@ -159,22 +159,25 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          <div className="footer-col footer-links">
+<div className="footer-col footer-links">
             <h4 className="footer-col-title">Services</h4>
             <ul>
+              {/* Pointing to the main anchor on the services page */}
               <li>
-                <Link to="/services/it-advisory">IT Advisory & Consulting</Link>
+                <Link smooth to="/services#pillars">All Service Pillars</Link>
               </li>
               <li>
-                <Link to="/services/grc">Governance, Risk & Compliance</Link>
+                <Link to="/services/it-modernization">IT Modernization</Link>
+              </li>
+              <li>
+                <Link to="/services/cybersecurity">Cybersecurity & Risk</Link>
               </li>
               <li>
                 <Link to="/services/managed-it">Managed IT Services</Link>
               </li>
-              <li>
-                <Link to="/services/tech-sourcing">Technology Sourcing</Link>
-              </li>
+              {/* If GRC is still a standalone page, keep this; 
+                  otherwise, point it to the section inside Cybersecurity */}
+      
             </ul>
           </div>
 
